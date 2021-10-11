@@ -1,10 +1,133 @@
-body {
-  margin: 0;
+#welcome {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  background-color: #FBEFAE;
+  border-radius: 32px 32px 0 0;
+  height: 201px;
 }
 
-.Background.Welcome {
-  height: 100%;
+#title {
+  margin-left: 20px;
+  margin-top: 70px;
+  font-weight: bold;
+  font-size: 49px;
+}
+
+#title_form {
+  text-align: left;
+  margin-left: 20px;
+  margin-top: 70px;
+  font-size: 31px;
+}
+
+#login {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#menu {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  background-color: #FBEFAE;
+  border-radius: 32px 32px 0 0;
+  height: 64px;
+}
+
+.background_welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-image: url("../../Assets/WelcomeBackground.svg");
+  height: 100vh;
+  width: 100vw;
+}
+
+.background_login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url("../../Assets/LoginBackground.svg");
+  height: 100vh;
+  width: 100vw;
+}
+
+.background {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  height: calc(100vh - 64px);
+  width: 100vw;
+}
+
+.button {
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #E5E5E5 !important;
+  text-decoration: none;
+  width: 50vw;
+  border-radius: 32px;
+  padding: 20px;
+  background-color: #684500;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.input_text {
+  margin-top: 30px;
+  border-radius: 32px;
+  color: #684500;
+  border: 2px solid #684500;
+  padding: 15px;
+  background-color: #FBEFAE;
+}
+
+.input_submit {
+  margin-top: 30px;
+  color: #E5E5E5 !important;
+  text-decoration: none;
+  width: 100%;
+  border-radius: 32px;
+  padding: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #684500;
+  border: #684500;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.icon {
+  color: #684500;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  border: 0;
+  color: #343223;
+  font-family: "Ubuntu";
+}
+
+a:link, a:visited {
+  color: #684500;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin: auto;
 }
 
 /*# sourceMappingURL=Style.css.map */

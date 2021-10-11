@@ -1,8 +1,22 @@
+@import "Color";
+@import "Id";
+@import "Class";
+
 body {
   margin: 0;
+  height: 100vh;
+  border: 0;
+  color: $dark;
+  font-family: "Ubuntu";
 }
 
-.Background.Welcome {
-  height: 100%;
- background-image: url("../../Assets/WelcomeBackground.svg");
+a:link, a:visited {
+  color: $brown;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin: auto;
 }
