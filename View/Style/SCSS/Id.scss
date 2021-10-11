@@ -1,0 +1,38 @@
+#welcome {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  background-color: $beige;
+  border-radius: 32px 32px 0 0;
+  height: 201px;
+}
+
+#title {
+  margin-left: 20px;
+  margin-top: 70px;
+  font-weight: bold;
+  font-size: 49px;
+}
+#title_form{
+  text-align: left;
+  margin-left: 20px;
+  margin-top: 70px;
+  font-size: 31px;
+}
+
+#login {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#menu {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  background-color: $beige;
+  border-radius: 32px 32px 0 0;
+  height: 64px;
+}
