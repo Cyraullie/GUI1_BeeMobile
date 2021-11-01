@@ -12,11 +12,18 @@ switch ($action) {
     case "Register" :
         require "View/Register.php";
         break;
+        //TODO à refaire
     case "Home" :
         require "View/Home.php";
         break;
-    case "Agenda" :
+    case "AgendaDay" :
         require "View/CalendarDay.php";
+        break;
+    case "AgendaWeek" :
+        require "View/CalendarWeek.php";
+        break;
+    case "AgendaMonth" :
+        require "View/CalendarMonth.php";
         break;
 
 

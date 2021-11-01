@@ -50,13 +50,13 @@
 }
 
 .active {
-  background-color: $brown;
-  color: white;
+  background-color: $brown !important;
+  color: white !important;
 }
 
 .inactive {
-  background-color: $honey;
-  color: $brown;
+  background-color: $honey !important;
+  color: $brown !important;
 }
 
 .button{
@@ -109,11 +109,13 @@
 .area_parent {
   background-color: $dark;
   width: 90%;
-  //height: 500px;
+  min-height: 120px;
   padding-bottom: 10px;
   margin: auto;
-  border-radius: 16px;
-  margin-top: 10px;
+  margin-top: 0;
+  border-radius: 0 0 16px 16px;
+  overflow-y: scroll;
+  margin-bottom: 15px;
 }
 .area_parent > .content {
 
@@ -124,20 +126,47 @@
   margin-left: 16px;
 }
 
-.area_parent > .title {
+.title_day {
   background-color: $brown;
+  width: calc(90vw - 55px);
+  margin: auto;
+  color: $white;
+  padding-left: 20px;
+  border-radius: 16px 16px 0 0;
+}
+
+.title_home {
+  background-color: $brown;
+  width: calc(90vw - 20px);
+  margin: auto;
+  margin-bottom: 0;
+  color: $white;
+  padding-left: 20px;
+  border-radius: 16px 16px 0 0;
+}
+.title_note {
+  background-color: $brown;
+  width: calc(75vw - 20px);
+  margin: auto;
+  margin-bottom: 0;
+  margin-top: 10px;
   color: $white;
   padding-left: 20px;
   border-radius: 16px 16px 0 0;
 }
 
 .content > .area_child{
+  margin-top: 10px;
+  border-radius: 16px ;
   margin-right: 5px;
   padding: 5px;
   overflow-y: scroll;
 
 }
 
+.week {
+  height: auto !important;
+}
 
 .area_child {
   background-color: $yellow;
@@ -145,8 +174,7 @@
   width: 75vw;
   height: 100px;
   margin: auto;
-  margin-top: 10px;
-  border-radius: 16px;
+  border-radius: 0 0 16px 16px;
   padding-bottom: 10px;
 }
 
@@ -156,5 +184,10 @@
   color: $white;
   font-weight: bold;
   padding-left: 20px;
-  border-radius: 15px 15px 0 0;
+  border-radius: 14px 14px 0 0;
+}
+
+.content {
+
+  overflow-y: scroll;
 }

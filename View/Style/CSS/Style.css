@@ -109,13 +109,13 @@
 }
 
 .active {
-  background-color: #684500;
-  color: white;
+  background-color: #684500 !important;
+  color: white !important;
 }
 
 .inactive {
-  background-color: #C88504;
-  color: #684500;
+  background-color: #C88504 !important;
+  color: #684500 !important;
 }
 
 .button {
@@ -167,10 +167,13 @@
 .area_parent {
   background-color: #343223;
   width: 90%;
+  min-height: 120px;
   padding-bottom: 10px;
   margin: auto;
-  border-radius: 16px;
-  margin-top: 10px;
+  margin-top: 0;
+  border-radius: 0 0 16px 16px;
+  overflow-y: scroll;
+  margin-bottom: 15px;
 }
 
 .area_parent > .content {
@@ -181,17 +184,46 @@
   margin-left: 16px;
 }
 
-.area_parent > .title {
+.title_day {
   background-color: #684500;
+  width: calc(90vw - 55px);
+  margin: auto;
+  color: #E5E5E5;
+  padding-left: 20px;
+  border-radius: 16px 16px 0 0;
+}
+
+.title_home {
+  background-color: #684500;
+  width: calc(90vw - 20px);
+  margin: auto;
+  margin-bottom: 0;
+  color: #E5E5E5;
+  padding-left: 20px;
+  border-radius: 16px 16px 0 0;
+}
+
+.title_note {
+  background-color: #684500;
+  width: calc(75vw - 20px);
+  margin: auto;
+  margin-bottom: 0;
+  margin-top: 10px;
   color: #E5E5E5;
   padding-left: 20px;
   border-radius: 16px 16px 0 0;
 }
 
 .content > .area_child {
+  margin-top: 10px;
+  border-radius: 16px;
   margin-right: 5px;
   padding: 5px;
   overflow-y: scroll;
+}
+
+.week {
+  height: auto !important;
 }
 
 .area_child {
@@ -200,8 +232,7 @@
   width: 75vw;
   height: 100px;
   margin: auto;
-  margin-top: 10px;
-  border-radius: 16px;
+  border-radius: 0 0 16px 16px;
   padding-bottom: 10px;
 }
 
@@ -210,7 +241,11 @@
   color: #E5E5E5;
   font-weight: bold;
   padding-left: 20px;
-  border-radius: 15px 15px 0 0;
+  border-radius: 14px 14px 0 0;
+}
+
+.content {
+  overflow-y: scroll;
 }
 
 body {
@@ -223,6 +258,7 @@ body {
 
 a:link, a:visited {
   color: #684500;
+  text-decoration: none;
 }
 
 form {
