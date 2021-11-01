@@ -248,6 +248,33 @@
   overflow-y: scroll;
 }
 
+.month .title_day {
+  height: 19px;
+  width: calc(10vw - 1px);
+}
+.month .area_parent {
+  height: 35px;
+  min-height: 0;
+  width: 15vw;
+  overflow-y: hidden;
+}
+.month .area_parent > .dayOfMonth {
+  color: white;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.thisDay {
+  background-color: #C88504;
+  color: #684500;
+}
+
+.swiper {
+  width: 372px;
+  height: 812px;
+}
+
 body {
   margin: 0;
   height: 100vh;

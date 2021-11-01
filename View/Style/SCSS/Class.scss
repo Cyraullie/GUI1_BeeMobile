@@ -40,6 +40,10 @@
   overflow-y: scroll;
 }
 
+
+
+
+
 .calendar_button{
   display: flex;
   flex-direction: row;
@@ -190,4 +194,30 @@
 .content {
 
   overflow-y: scroll;
+}
+
+.month {
+  .title_day{
+    height: 19px;
+    width: calc(10vw - 1px);
+  }
+
+  .area_parent{
+    height: 35px;
+    min-height: 0;
+    width: 15vw;
+    overflow-y: hidden;
+  }
+
+  .area_parent > .dayOfMonth {
+    color: white;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.thisDay {
+  background-color: $honey;
+  color: $brown;
 }

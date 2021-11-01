@@ -2,6 +2,7 @@
 ob_start();
 ?>
 
+
     <div class="background">
         <div class="calendar_button">
             <a id="day" href="?action=AgendaDay" class="inactive">Jour</a>
@@ -9,7 +10,7 @@ ob_start();
             <a id="month" href="?action=AgendaMonth" class="inactive">Mois</a>
         </div>
 
-        <h1 class="title"><?= date('01/m/y') . " - ". date('t/m/y') ?></h1>
+        <h1 class="title"><?= date("d/m/y", strtotime('monday this week')) . " - ". date("d/m/y", strtotime('sunday this week')) ?></h1>
         <div class="background_calendar">
 
 
