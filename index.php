@@ -15,6 +15,9 @@ switch ($action) {
     case "Home" :
         require "View/Home.php";
         break;
+    case "Agenda" :
+        require "View/CalendarDay.php";
+        break;
 
 
 

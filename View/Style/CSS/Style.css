@@ -38,6 +38,29 @@
   height: 64px;
 }
 
+#day {
+  border-radius: 32px 0 0 0;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  width: 33.33%;
+}
+
+#week {
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  width: 33.33%;
+}
+
+#month {
+  border-radius: 0 32px 0 0;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  width: 33.33%;
+}
+
 .background_welcome {
   display: flex;
   flex-direction: column;
@@ -63,6 +86,36 @@
   background-color: white;
   height: calc(100vh - 64px);
   width: 100vw;
+}
+
+.background_calendar {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 0;
+  background-color: #FBEFAE;
+  height: calc(100vh - 190px);
+  width: 90vw;
+  overflow-y: scroll;
+}
+
+.calendar_button {
+  display: flex;
+  flex-direction: row;
+  width: 90vw;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+.active {
+  background-color: #684500;
+  color: white;
+}
+
+.inactive {
+  background-color: #C88504;
+  color: #684500;
 }
 
 .button {
@@ -113,10 +166,11 @@
 
 .area_parent {
   background-color: #343223;
-  width: 90vw;
+  width: 90%;
   padding-bottom: 10px;
   margin: auto;
   border-radius: 16px;
+  margin-top: 10px;
 }
 
 .area_parent > .content {
@@ -137,13 +191,14 @@
 .content > .area_child {
   margin-right: 5px;
   padding: 5px;
+  overflow-y: scroll;
 }
 
 .area_child {
   background-color: #F7D837;
   min-width: 50%;
   width: 75vw;
-  min-height: 70px;
+  height: 100px;
   margin: auto;
   margin-top: 10px;
   border-radius: 16px;
@@ -153,6 +208,7 @@
 .area_child > .title {
   background-color: #684500;
   color: #E5E5E5;
+  font-weight: bold;
   padding-left: 20px;
   border-radius: 15px 15px 0 0;
 }
@@ -174,6 +230,18 @@ form {
   flex-direction: column;
   width: 75%;
   margin: auto;
+}
+
+h1.title {
+  text-align: center;
+  color: #684500;
+  font-size: 24px;
+  background-color: #FBEFAE;
+  height: 30px;
+  width: 90vw;
+  margin: auto;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 /*# sourceMappingURL=Style.css.map */

@@ -29,6 +29,36 @@
   width: 100vw;
 }
 
+.background_calendar {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 0;
+  background-color: $beige;
+  height: calc(100vh - 190px);
+  width: 90vw;
+  overflow-y: scroll;
+}
+
+.calendar_button{
+  display: flex;
+  flex-direction: row;
+  width: 90vw;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+.active {
+  background-color: $brown;
+  color: white;
+}
+
+.inactive {
+  background-color: $honey;
+  color: $brown;
+}
+
 .button{
   margin: auto;
   margin-top: 10px;
@@ -78,11 +108,12 @@
 
 .area_parent {
   background-color: $dark;
-  width: 90vw;
+  width: 90%;
   //height: 500px;
   padding-bottom: 10px;
   margin: auto;
   border-radius: 16px;
+  margin-top: 10px;
 }
 .area_parent > .content {
 
@@ -103,6 +134,8 @@
 .content > .area_child{
   margin-right: 5px;
   padding: 5px;
+  overflow-y: scroll;
+
 }
 
 
@@ -110,7 +143,7 @@
   background-color: $yellow;
   min-width: 50%;
   width: 75vw;
-  min-height: 70px;
+  height: 100px;
   margin: auto;
   margin-top: 10px;
   border-radius: 16px;
@@ -121,6 +154,7 @@
 .area_child > .title {
   background-color: $brown;
   color: $white;
+  font-weight: bold;
   padding-left: 20px;
   border-radius: 15px 15px 0 0;
 }
