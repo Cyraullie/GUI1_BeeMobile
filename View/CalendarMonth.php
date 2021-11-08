@@ -5,6 +5,8 @@ ob_start();
 
 $z = 1;
 ?>
+    <script type="module" src="View/JS/Vertical_Swiper.js" defer></script>
+
     <div class="background">
         <div class="calendar_button">
             <a id="day" href="?action=AgendaDay" class="inactive">Jour</a>
@@ -39,7 +41,7 @@ $z = 1;
 
                                         <td class="month">
                                             <div class="title_day"></div>
-                                            <div class="area_parent <?= date("d") == $z ? "thisDay" : "" ?>">
+                                            <div class="area_parent <?= date("d") == $z && $x == 0? "thisDay" : "" ?>">
                                                 <h1 class="dayOfMonth"><?= ($z <= 9) ? "0" . $z : $z ?></h1>
                                             </div>
                                         </td>

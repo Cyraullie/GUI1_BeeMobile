@@ -2,8 +2,7 @@
 ob_start();
 
 ?>
-
-
+    <script type="module" src="View/JS/Horizontal_Swiper.js" defer></script>
 
             <div class="background">
                 <div class="calendar_button">
