@@ -12,8 +12,16 @@ switch ($action) {
     case "Register" :
         require "View/Register.php";
         break;
-        //TODO à refaire
     case "Home" :
+        require "View/Home.php";
+        break;
+    case "Photo" :
+        require "View/Home.php";
+        break;
+    case "Stats" :
+        require "View/Home.php";
+        break;
+    case "JDB" :
         require "View/Home.php";
         break;
     case "AgendaDay" :
@@ -25,10 +33,6 @@ switch ($action) {
     case "AgendaMonth" :
         require "View/CalendarMonth.php";
         break;
-
-
-
-
     default :
         require "View/Welcome.php";
         break;
