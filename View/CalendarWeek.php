@@ -1,5 +1,6 @@
 <?php
 ob_start();
+//TODO ajouter des acordions https://getbootstrap.com/docs/5.0/components/accordion/
 ?>
 
     <script type="module" src="View/JS/Horizontal_Swiper.js" defer></script>
