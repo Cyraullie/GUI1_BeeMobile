@@ -5,8 +5,13 @@
   "start_url": "index.php",
   "display": "standalone",
   "icons": [{
-    "src": "Doc/Icon.png",
-    "sizes": "48x48",
+    "src": "/Doc/logo.png",
+    "sizes": "512x512",
     "type": "image/png"
-  }]
+  },{
+    "src": "/Doc/logo144.png",
+    "sizes": "144x144",
+    "type": "image/png"
+  }
+  ]
 }
