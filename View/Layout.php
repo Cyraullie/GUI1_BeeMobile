@@ -26,7 +26,7 @@
 
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
-    <script type="module" src="View/JS/Swiper.js" defer></script>
+    <link rel="manifest" href="./manifest.json">
 
 </head>
 <body>
@@ -48,4 +48,5 @@
 <!-- /FOOTER -->
 
 </body>
+
 </html>

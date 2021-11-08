@@ -1,7 +1,6 @@
 @import "Color";
 @import "Id";
 @import "Class";
-@import "Swiper";
 
 body {
   margin: 0;
@@ -9,6 +8,7 @@ body {
   border: 0;
   color: $dark;
   font-family: "Ubuntu";
+
 }
 
 a:link, a:visited {
