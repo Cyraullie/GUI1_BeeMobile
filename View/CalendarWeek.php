@@ -5,53 +5,6 @@ ob_start();
 
     <script type="module" src="View/JS/Horizontal_Swiper.js" defer></script>
 
-
-    <div class="panel-group" id="accordion">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-                        Collapsible Group 1</a>
-                </h4>
-            </div>
-            <div id="collapse1" class="panel-collapse collapse in">
-                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                    commodo consequat.</div>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-                        Collapsible Group 2</a>
-                </h4>
-            </div>
-            <div id="collapse2" class="panel-collapse collapse">
-                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                    commodo consequat.</div>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
-                        Collapsible Group 3</a>
-                </h4>
-            </div>
-            <div id="collapse3" class="panel-collapse collapse">
-                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                    commodo consequat.</div>
-            </div>
-        </div>
-    </div>
-
-
     <div class="background">
         <div class="calendar_button">
             <a id="day" href="?action=AgendaDay" class="inactive">Jour</a>
@@ -72,11 +25,8 @@ ob_start();
                         <h1 class="title"><?= date("d/m/y", strtotime("monday this week + {$i} day")) . " - " . date("d/m/y", strtotime("sunday this week + {$i} day")) ?></h1>
                         <div class="background_calendar">
 
-
-                            <div class="title_day">
-                                <a>Lundi</a>
-                            </div>
-                            <div class="area_parent">
+                            <button class="accordion title_day">Lundi</button>
+                            <div class=" panel area_parent">
                                 <div class="title_note">
                                     <a>10h00</a>
                                 </div>
@@ -122,10 +72,8 @@ ob_start();
                                 </div>
                             </div>
 
-                            <div class="title_day">
-                                <a>Mardi</a>
-                            </div>
-                            <div class="area_parent">
+                            <button class="accordion title_day">Mardi</button>
+                            <div class="panel area_parent">
                                 <div class="title_note">
                                     <a>10h00</a>
                                 </div>
@@ -149,10 +97,8 @@ ob_start();
                                 </div>
                             </div>
 
-                            <div class="title_day">
-                                <a>Mercredi</a>
-                            </div>
-                            <div class="area_parent">
+                            <button class="accordion title_day">Mercredi</button>
+                            <div class="panel area_parent">
                                 <div class="title_note">
                                     <a>10h00</a>
                                 </div>
@@ -176,10 +122,8 @@ ob_start();
                                 </div>
                             </div>
 
-                            <div class="title_day">
-                                <a>Jeudi</a>
-                            </div>
-                            <div class="area_parent">
+                            <button class="accordion title_day">Jeudi</button>
+                            <div class="panel area_parent">
                                 <div class="title_note">
                                     <a>10h00</a>
                                 </div>
@@ -203,10 +147,8 @@ ob_start();
                                 </div>
                             </div>
 
-                            <div class="title_day">
-                                <a>Vendredi</a>
-                            </div>
-                            <div class="area_parent">
+                            <button class="accordion title_day">Vendredi</button>
+                            <div class="panel area_parent">
                                 <div class="title_note">
                                     <a>10h00</a>
                                 </div>
@@ -230,10 +172,8 @@ ob_start();
                                 </div>
                             </div>
 
-                            <div class="title_day">
-                                <a>Samedi</a>
-                            </div>
-                            <div class="area_parent">
+                            <button class="accordion title_day">Samedi</button>
+                            <div class="panel area_parent">
                                 <div class="title_note">
                                     <a>10h00</a>
                                 </div>
@@ -257,10 +197,8 @@ ob_start();
                                 </div>
                             </div>
 
-                            <div class="title_day">
-                                <a>Dimanche</a>
-                            </div>
-                            <div class="area_parent">
+                            <button class="accordion title_day">Dimanche</button>
+                            <div class="panel area_parent">
                                 <div class="title_note">
                                     <a>10h00</a>
                                 </div>
