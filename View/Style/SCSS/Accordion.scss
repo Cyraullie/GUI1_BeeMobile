@@ -9,6 +9,16 @@
   margin-top: 20px;
 }
 
+.accordion.title_day {
+  background-color: $brown;
+  width: calc(75vw) ;
+  margin: auto;
+  margin-top: 10px;
+  color: $white;
+  padding-left: 20px;
+  border-radius: 16px 16px 0 0;
+}
+
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .accordion:hover {

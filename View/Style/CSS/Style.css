@@ -186,13 +186,12 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 75vw;
   margin-left: 16px;
 }
 
 .title_day {
   background-color: #684500;
-  width: calc(90vw - 55px);
+  width: calc(85vw - 56px);
   margin: auto;
   color: #E5E5E5;
   padding-left: 20px;
@@ -221,11 +220,12 @@
 }
 
 .content > .area_child {
-  margin-top: 10px;
   border-radius: 16px;
-  margin-right: 5px;
+  margin: auto;
+  margin-top: 10px;
   padding: 5px;
   overflow-y: scroll;
+  width: 95%;
 }
 
 .week {
@@ -291,6 +291,16 @@
   outline: none;
   transition: 0.4s;
   margin-top: 20px;
+}
+
+.accordion.title_day {
+  background-color: #684500;
+  width: calc(75vw);
+  margin: auto;
+  margin-top: 10px;
+  color: #E5E5E5;
+  padding-left: 20px;
+  border-radius: 16px 16px 0 0;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
