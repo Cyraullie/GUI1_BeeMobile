@@ -20,10 +20,8 @@ ob_start();
                         <h1 class="title"><?= date("d/m/Y", strtotime("+ {$i} day")) ?></h1>
                         <div class="background_calendar">
 
-                            <div class="title_day">
-                                <a>10h00</a>
-                            </div>
-                            <div class="area_parent">
+                            <button class="accordion title_day">10h00</button>
+                            <div class="panel area_parent">
                                 <div class="content">
 
                                     <a class="area_child">
@@ -61,11 +59,8 @@ ob_start();
                                 </div>
                             </div>
 
-
-                            <div class="title_day">
-                                <a>12h30</a>
-                            </div>
-                            <div class="area_parent">
+                            <button class="accordion title_day">12h30</button>
+                            <div class="panel area_parent">
                                 <div class="content">
 
                                     <a class="area_child">
@@ -85,10 +80,8 @@ ob_start();
                                 </div>
                             </div>
 
-                            <div class="title_day">
-                                <a>15h30</a>
-                            </div>
-                            <div class="area_parent">
+                            <button class="accordion title_day">15h30</button>
+                            <div class="panel area_parent">
                                 <div class="content">
 
                                     <a class="area_child">
@@ -108,10 +101,8 @@ ob_start();
                                 </div>
                             </div>
 
-                            <div class="title_day">
-                                <a>16h30</a>
-                            </div>
-                            <div class="area_parent">
+                            <button class="accordion title_day">16h30</button>
+                            <div class="panel area_parent">
                                 <div class="content">
 
                                     <a class="area_child">
@@ -131,10 +122,8 @@ ob_start();
                                 </div>
                             </div>
 
-                            <div class="title_day">
-                                <a>18h30</a>
-                            </div>
-                            <div class="area_parent">
+                            <button class="accordion title_day">18h30</button>
+                            <div class="panel area_parent">
                                 <div class="content">
 
                                     <a class="area_child">

@@ -27,6 +27,7 @@
     <link rel="manifest" href="./manifest.json">
 
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script type="module" src="View/JS/Accordion.js" defer></script>
 
     <script>
         if('serviceWorker' in navigator) {
