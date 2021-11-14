@@ -16,8 +16,8 @@ ob_start();
                 <a>10h00</a>
             </div>
             <div class="area_child">
-                <div class="content">
-                    <a>
+                <div class="content home">
+
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida nibh a tellus pretium
                         dictum.
                         Ut sit amet purus dapibus, pulvinar mauris sed, molestie arcu. Proin ac fermentum diam, ut
@@ -26,7 +26,7 @@ ob_start();
                         sed
                         imperdiet.
 
-                    </a>
+
                 </div>
             </div>
         </div>
@@ -37,8 +37,8 @@ ob_start();
         </div>
         <div class="area_parent">
             <div class="content">
-                <a class="area_child">faires des trucs pas bien</a>
-                <a class="area_child">faires des trucs vraiments pas bien</a>
+                <a class="area_child home">faires des trucs pas bien</a>
+                <a class="area_child home">faires des trucs vraiments pas bien</a>
             </div>
         </div>
 
