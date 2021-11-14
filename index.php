@@ -20,8 +20,7 @@ switch ($action) {
         require "View/Home.php";
         break;
     case "Stats" :
-        // TODO a faire
-        require "View/Home.php";
+        require "View/Stat.php";
         break;
     case "JDB" :
         require "View/JDB.php";
