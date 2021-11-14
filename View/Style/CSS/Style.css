@@ -109,9 +109,10 @@
 
 .title_home {
   background-color: #684500;
-  width: calc(90vw - 20px);
+  width: calc(83vw - 19px);
   margin: auto;
   margin-bottom: 0;
+  margin-top: 20px;
   color: #E5E5E5;
   padding-left: 20px;
   border-radius: 16px 16px 0 0;
@@ -357,7 +358,6 @@
 
 .area_child {
   background-color: #F7D837;
-  min-width: 50%;
   width: 70vw;
   height: 100px;
   margin: auto;
@@ -415,6 +415,17 @@
   background-color: #684500;
   border-radius: 16px;
   cursor: pointer;
+}
+
+.content.home {
+  overflow-y: scroll;
+  height: 110px;
+  width: 100%;
+}
+
+.area_child.home {
+  margin-right: 5px;
+  margin-left: 5px;
 }
 
 /* Style the buttons that are used to open and close the accordion panel */

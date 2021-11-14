@@ -135,7 +135,6 @@
 
 .area_child {
   background-color: $yellow;
-  min-width: 50%;
   width: 70vw;
   height: 100px;
   margin: auto;
@@ -199,4 +198,15 @@
   background-color: $brown;
   border-radius: 16px;
   cursor: pointer;
+}
+
+.content.home {
+  overflow-y: scroll;
+  height: 110px;
+  width: 100%;
+}
+
+.area_child.home {
+  margin-right: 5px;
+  margin-left: 5px;
 }
