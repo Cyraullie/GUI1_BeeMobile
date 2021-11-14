@@ -16,8 +16,7 @@ switch ($action) {
         require "View/Home.php";
         break;
     case "Photo" :
-        // TODO a faire
-        require "View/Home.php";
+        require "View/Photo.php";
         break;
     case "Stats" :
         require "View/Stat.php";

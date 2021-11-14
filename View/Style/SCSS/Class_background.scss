@@ -66,3 +66,13 @@
   overflow-y: scroll !important;
   text-align: center;
 }
+
+.background_photo {
+  height: calc(100vh - 190px);
+  width: 90vw;
+  margin: auto;
+  margin-top: 0;
+  text-align: center;
+  justify-content: center;
+  background-color: $beige;
+}

@@ -61,6 +61,22 @@
   width: 33.33%;
 }
 
+#varroa {
+  border-radius: 32px 0 0 0;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  width: 50%;
+}
+
+#reine {
+  border-radius: 0 32px 0 0;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  width: 50%;
+}
+
 #hive {
   border-radius: 32px 32px 0 0;
   text-align: center;
@@ -201,6 +217,16 @@
 .background_scrollable {
   overflow-y: scroll !important;
   text-align: center;
+}
+
+.background_photo {
+  height: calc(100vh - 190px);
+  width: 90vw;
+  margin: auto;
+  margin-top: 0;
+  text-align: center;
+  justify-content: center;
+  background-color: #FBEFAE;
 }
 
 .calendar_button {
@@ -379,6 +405,18 @@
   height: 812px;
 }
 
+.custom-file-upload {
+  display: block;
+  padding: 20px;
+  margin: auto;
+  margin-top: calc(75% + 20px);
+  width: 50%;
+  color: white;
+  background-color: #684500;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
   cursor: pointer;
@@ -417,6 +455,10 @@ body {
   border: 0;
   color: #343223;
   font-family: "Ubuntu";
+}
+
+input[type=file] {
+  display: none;
 }
 
 a:link, a:visited {
