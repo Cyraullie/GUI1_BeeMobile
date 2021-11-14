@@ -5,215 +5,528 @@ ob_start();
     <script type="module" src="View/JS/Horizontal_Swiper.js" defer></script>
 
     <div class="background">
-        <div class="calendar_button">
-            <select id="hive" class="active">
-                <option selected>Ruche</option>
-                <option>Ruche #1</option>
-                <option>Ruche #2</option>
-            </select>
-        </div>
+        <div class="background_scrollable">
 
 
-        <div class="background_calendar">
+            <button class="accordion title_hive">Ruche 1</button>
+            <div class="panel background_hive">
+                <div class="panel background_center">
 
-            <button class="accordion title_day">01/10/2021</button>
-            <div class=" panel area_parent">
-                <div class="title_note">
-                    <a>10h00</a>
-                </div>
-                <div class="area_child week">
-
-                    <div class="content">
-                        <a>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida nibh a
-                            tellus pretium
-                            dictum.
-                            Ut sit amet purus dapibus, pulvinar mauris sed, molestie arcu. Proin ac
-                            fermentum diam, ut
-                            suscipit
-                            libero. Nam ut ipsum ut justo dignissim egestas nec nec neque. Curabitur
-                            efficitur nec tortor
-                            sed
-                            imperdiet.
-
-                        </a>
+                    <button class="accordion title_day_hive">01/10/2021</button>
+                    <div class=" panel area_parent hive">
+                        <div class="hive_area">
+                            <div class="stat_size">
+                                <div class="title_note_hive">
+                                    <a>Poids</a>
+                                </div>
+                                <div class="area_child hive">
+                                    <div class="content">
+                                        <a>10 Kg</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stat_size">
+                                <div class="title_note_hive">
+                                    <a>Humidité</a>
+                                </div>
+                                <div class="area_child hive">
+                                    <div class="content">
+                                        <a>20%</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stat_size">
+                                <div class="title_note_hive">
+                                    <a>Temp °C</a>
+                                </div>
+                                <div class="area_child hive">
+                                    <div class="content">
+                                        <a>25°C</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="title_note">
-                    <a>12h00</a>
-                </div>
-                <div class="area_child week">
-
-                    <div class="content">
-                        <a>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida nibh a
-                            tellus pretium
-                            dictum.
-                            Ut sit amet purus dapibus, pulvinar mauris sed, molestie arcu. Proin ac
-                            fermentum diam, ut
-                            suscipit
-                            libero. Nam ut ipsum ut justo dignissim egestas nec nec neque. Curabitur
-                            efficitur nec tortor
-                            sed
-                            imperdiet.
-
-                        </a>
+                    <button class="accordion title_day_hive">05/10/2021</button>
+                    <div class=" panel area_parent hive">
+                        <div class="hive_area">
+                            <div class="stat_size">
+                                <div class="title_note_hive">
+                                    <a>Poids</a>
+                                </div>
+                                <div class="area_child hive">
+                                    <div class="content">
+                                        <a>10 Kg</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stat_size">
+                                <div class="title_note_hive">
+                                    <a>Humidité</a>
+                                </div>
+                                <div class="area_child hive">
+                                    <div class="content">
+                                        <a>20%</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stat_size">
+                                <div class="title_note_hive">
+                                    <a>Temp °C</a>
+                                </div>
+                                <div class="area_child hive">
+                                    <div class="content">
+                                        <a>25°C</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+                    <button class="accordion title_day_hive">10/10/2021</button>
+                    <div class=" panel area_parent hive">
+                        <div class="hive_area">
+                            <div class="stat_size">
+                                <div class="title_note_hive">
+                                    <a>Poids</a>
+                                </div>
+                                <div class="area_child hive">
+                                    <div class="content">
+                                        <a>10 Kg</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stat_size">
+                                <div class="title_note_hive">
+                                    <a>Humidité</a>
+                                </div>
+                                <div class="area_child hive">
+                                    <div class="content">
+                                        <a>20%</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stat_size">
+                                <div class="title_note_hive">
+                                    <a>Temp °C</a>
+                                </div>
+                                <div class="area_child hive">
+                                    <div class="content">
+                                        <a>25°C</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="accordion title_day_hive">12/10/2021</button>
+                    <div class=" panel area_parent hive">
+                        <div class="hive_area">
+                            <div class="stat_size">
+                                <div class="title_note_hive">
+                                    <a>Poids</a>
+                                </div>
+                                <div class="area_child hive">
+                                    <div class="content">
+                                        <a>10 Kg</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stat_size">
+                                <div class="title_note_hive">
+                                    <a>Humidité</a>
+                                </div>
+                                <div class="area_child hive">
+                                    <div class="content">
+                                        <a>20%</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stat_size">
+                                <div class="title_note_hive">
+                                    <a>Temp °C</a>
+                                </div>
+                                <div class="area_child hive">
+                                    <div class="content">
+                                        <a>25°C</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="accordion title_day_hive">15/10/2021</button>
+                    <div class=" panel area_parent hive">
+                        <div class="hive_area">
+                            <div class="stat_size">
+                                <div class="title_note_hive">
+                                    <a>Poids</a>
+                                </div>
+                                <div class="area_child hive">
+                                    <div class="content">
+                                        <a>10 Kg</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stat_size">
+                                <div class="title_note_hive">
+                                    <a>Humidité</a>
+                                </div>
+                                <div class="area_child hive">
+                                    <div class="content">
+                                        <a>20%</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stat_size">
+                                <div class="title_note_hive">
+                                    <a>Temp °C</a>
+                                </div>
+                                <div class="area_child hive">
+                                    <div class="content">
+                                        <a>25°C</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="accordion title_day_hive">20/10/2021</button>
+                    <div class=" panel area_parent hive">
+                        <div class="hive_area">
+                            <div class="stat_size">
+                                <div class="title_note_hive">
+                                    <a>Poids</a>
+                                </div>
+                                <div class="area_child hive">
+                                    <div class="content">
+                                        <a>10 Kg</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stat_size">
+                                <div class="title_note_hive">
+                                    <a>Humidité</a>
+                                </div>
+                                <div class="area_child hive">
+                                    <div class="content">
+                                        <a>20%</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stat_size">
+                                <div class="title_note_hive">
+                                    <a>Temp °C</a>
+                                </div>
+                                <div class="area_child hive">
+                                    <div class="content">
+                                        <a>25°C</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="accordion title_day_hive">30/10/2021</button>
+                    <div class=" panel area_parent hive">
+                        <div class="hive_area">
+                            <div class="stat_size">
+                                <div class="title_note_hive">
+                                    <a>Poids</a>
+                                </div>
+                                <div class="area_child hive">
+                                    <div class="content">
+                                        <a>10 Kg</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stat_size">
+                                <div class="title_note_hive">
+                                    <a>Humidité</a>
+                                </div>
+                                <div class="area_child hive">
+                                    <div class="content">
+                                        <a>20%</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stat_size">
+                                <div class="title_note_hive">
+                                    <a>Temp °C</a>
+                                </div>
+                                <div class="area_child hive">
+                                    <div class="content">
+                                        <a>25°C</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
 
-            <button class="accordion title_day">05/10/2021</button>
-            <div class="panel area_parent">
-                <div class="title_note">
-                    <a>10h00</a>
-                </div>
-                <div class="area_child week">
+            <button class="accordion title_hive">Ruche 2</button>
+            <div class="panel background_hive">
+                <div class="panel background_center">
 
-                    <div class="content">
-                        <a>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida nibh a
-                            tellus pretium
-                            dictum.
-                            Ut sit amet purus dapibus, pulvinar mauris sed, molestie arcu. Proin ac
-                            fermentum diam, ut
-                            suscipit
-                            libero. Nam ut ipsum ut justo dignissim egestas nec nec neque. Curabitur
-                            efficitur nec tortor
-                            sed
-                            imperdiet.
-
-                        </a>
+                    <button class="accordion title_day_hive">01/10/2021</button>
+                    <div class=" panel area_parent hive">
+                        <div class="hive_area">
+                            <div class="stat_size">
+                                <div class="title_note_hive">
+                                    <a>Poids</a>
+                                </div>
+                                <div class="area_child hive">
+                                    <div class="content">
+                                        <a>10 Kg</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stat_size">
+                                <div class="title_note_hive">
+                                    <a>Humidité</a>
+                                </div>
+                                <div class="area_child hive">
+                                    <div class="content">
+                                        <a>20%</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stat_size">
+                                <div class="title_note_hive">
+                                    <a>Temp °C</a>
+                                </div>
+                                <div class="area_child hive">
+                                    <div class="content">
+                                        <a>25°C</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+                    <button class="accordion title_day_hive">05/10/2021</button>
+                    <div class=" panel area_parent hive">
+                        <div class="hive_area">
+                            <div class="stat_size">
+                                <div class="title_note_hive">
+                                    <a>Poids</a>
+                                </div>
+                                <div class="area_child hive">
+                                    <div class="content">
+                                        <a>10 Kg</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stat_size">
+                                <div class="title_note_hive">
+                                    <a>Humidité</a>
+                                </div>
+                                <div class="area_child hive">
+                                    <div class="content">
+                                        <a>20%</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stat_size">
+                                <div class="title_note_hive">
+                                    <a>Temp °C</a>
+                                </div>
+                                <div class="area_child hive">
+                                    <div class="content">
+                                        <a>25°C</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="accordion title_day_hive">10/10/2021</button>
+                    <div class=" panel area_parent hive">
+                        <div class="hive_area">
+                            <div class="stat_size">
+                                <div class="title_note_hive">
+                                    <a>Poids</a>
+                                </div>
+                                <div class="area_child hive">
+                                    <div class="content">
+                                        <a>10 Kg</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stat_size">
+                                <div class="title_note_hive">
+                                    <a>Humidité</a>
+                                </div>
+                                <div class="area_child hive">
+                                    <div class="content">
+                                        <a>20%</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stat_size">
+                                <div class="title_note_hive">
+                                    <a>Temp °C</a>
+                                </div>
+                                <div class="area_child hive">
+                                    <div class="content">
+                                        <a>25°C</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="accordion title_day_hive">12/10/2021</button>
+                    <div class=" panel area_parent hive">
+                        <div class="hive_area">
+                            <div class="stat_size">
+                                <div class="title_note_hive">
+                                    <a>Poids</a>
+                                </div>
+                                <div class="area_child hive">
+                                    <div class="content">
+                                        <a>10 Kg</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stat_size">
+                                <div class="title_note_hive">
+                                    <a>Humidité</a>
+                                </div>
+                                <div class="area_child hive">
+                                    <div class="content">
+                                        <a>20%</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stat_size">
+                                <div class="title_note_hive">
+                                    <a>Temp °C</a>
+                                </div>
+                                <div class="area_child hive">
+                                    <div class="content">
+                                        <a>25°C</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="accordion title_day_hive">15/10/2021</button>
+                    <div class=" panel area_parent hive">
+                        <div class="hive_area">
+                            <div class="stat_size">
+                                <div class="title_note_hive">
+                                    <a>Poids</a>
+                                </div>
+                                <div class="area_child hive">
+                                    <div class="content">
+                                        <a>10 Kg</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stat_size">
+                                <div class="title_note_hive">
+                                    <a>Humidité</a>
+                                </div>
+                                <div class="area_child hive">
+                                    <div class="content">
+                                        <a>20%</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stat_size">
+                                <div class="title_note_hive">
+                                    <a>Temp °C</a>
+                                </div>
+                                <div class="area_child hive">
+                                    <div class="content">
+                                        <a>25°C</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="accordion title_day_hive">20/10/2021</button>
+                    <div class=" panel area_parent hive">
+                        <div class="hive_area">
+                            <div class="stat_size">
+                                <div class="title_note_hive">
+                                    <a>Poids</a>
+                                </div>
+                                <div class="area_child hive">
+                                    <div class="content">
+                                        <a>10 Kg</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stat_size">
+                                <div class="title_note_hive">
+                                    <a>Humidité</a>
+                                </div>
+                                <div class="area_child hive">
+                                    <div class="content">
+                                        <a>20%</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stat_size">
+                                <div class="title_note_hive">
+                                    <a>Temp °C</a>
+                                </div>
+                                <div class="area_child hive">
+                                    <div class="content">
+                                        <a>25°C</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="accordion title_day_hive">30/10/2021</button>
+                    <div class=" panel area_parent hive">
+                        <div class="hive_area">
+                            <div class="stat_size">
+                                <div class="title_note_hive">
+                                    <a>Poids</a>
+                                </div>
+                                <div class="area_child hive">
+                                    <div class="content">
+                                        <a>10 Kg</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stat_size">
+                                <div class="title_note_hive">
+                                    <a>Humidité</a>
+                                </div>
+                                <div class="area_child hive">
+                                    <div class="content">
+                                        <a>20%</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stat_size">
+                                <div class="title_note_hive">
+                                    <a>Temp °C</a>
+                                </div>
+                                <div class="area_child hive">
+                                    <div class="content">
+                                        <a>25°C</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
-
-            <button class="accordion title_day">10/10/2021</button>
-            <div class="panel area_parent">
-                <div class="title_note">
-                    <a>10h00</a>
-                </div>
-                <div class="area_child week">
-
-                    <div class="content">
-                        <a>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida nibh a
-                            tellus pretium
-                            dictum.
-                            Ut sit amet purus dapibus, pulvinar mauris sed, molestie arcu. Proin ac
-                            fermentum diam, ut
-                            suscipit
-                            libero. Nam ut ipsum ut justo dignissim egestas nec nec neque. Curabitur
-                            efficitur nec tortor
-                            sed
-                            imperdiet.
-
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <button class="accordion title_day">12/10/2021</button>
-            <div class="panel area_parent">
-                <div class="title_note">
-                    <a>10h00</a>
-                </div>
-                <div class="area_child week">
-
-                    <div class="content">
-                        <a>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida nibh a
-                            tellus pretium
-                            dictum.
-                            Ut sit amet purus dapibus, pulvinar mauris sed, molestie arcu. Proin ac
-                            fermentum diam, ut
-                            suscipit
-                            libero. Nam ut ipsum ut justo dignissim egestas nec nec neque. Curabitur
-                            efficitur nec tortor
-                            sed
-                            imperdiet.
-
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <button class="accordion title_day">15/10/2021</button>
-            <div class="panel area_parent">
-                <div class="title_note">
-                    <a>10h00</a>
-                </div>
-                <div class="area_child week">
-
-                    <div class="content">
-                        <a>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida nibh a
-                            tellus pretium
-                            dictum.
-                            Ut sit amet purus dapibus, pulvinar mauris sed, molestie arcu. Proin ac
-                            fermentum diam, ut
-                            suscipit
-                            libero. Nam ut ipsum ut justo dignissim egestas nec nec neque. Curabitur
-                            efficitur nec tortor
-                            sed
-                            imperdiet.
-
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <button class="accordion title_day">20/10/2021</button>
-            <div class="panel area_parent">
-                <div class="title_note">
-                    <a>10h00</a>
-                </div>
-                <div class="area_child week">
-
-                    <div class="content">
-                        <a>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida nibh a
-                            tellus pretium
-                            dictum.
-                            Ut sit amet purus dapibus, pulvinar mauris sed, molestie arcu. Proin ac
-                            fermentum diam, ut
-                            suscipit
-                            libero. Nam ut ipsum ut justo dignissim egestas nec nec neque. Curabitur
-                            efficitur nec tortor
-                            sed
-                            imperdiet.
-
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <button class="accordion title_day">30/10/2021</button>
-            <div class="panel area_parent">
-                <div class="title_note">
-                    <a>10h00</a>
-                </div>
-                <div class="area_child week">
-
-                    <div class="content">
-                        <a>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida nibh a
-                            tellus pretium
-                            dictum.
-                            Ut sit amet purus dapibus, pulvinar mauris sed, molestie arcu. Proin ac
-                            fermentum diam, ut
-                            suscipit
-                            libero. Nam ut ipsum ut justo dignissim egestas nec nec neque. Curabitur
-                            efficitur nec tortor
-                            sed
-                            imperdiet.
-
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-
         </div>
     </div>
 

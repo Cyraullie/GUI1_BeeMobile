@@ -1,0 +1,64 @@
+
+
+.title_day {
+  background-color: $brown;
+  width: calc(85vw - 56px);
+  margin: auto;
+  color: $white;
+  padding-left: 20px;
+  border-radius: 16px 16px 0 0;
+}
+
+.title_day_hive {
+  background-color: $brown;
+  width: calc(79vw);
+  margin: auto;
+  margin-bottom: 0;
+  margin-top: 20px;
+  color: $white;
+  padding-left: 20px;
+  border-radius: 16px 16px 0 0;
+}
+
+.title_home {
+  background-color: $brown;
+  width: calc(90vw - 20px);
+  margin: auto;
+  margin-bottom: 0;
+  color: $white;
+  padding-left: 20px;
+  border-radius: 16px 16px 0 0;
+}
+.title_note {
+  background-color: $brown;
+  width: calc(70vw - 20px);
+  margin: auto;
+  margin-bottom: 0;
+  margin-top: 10px;
+  color: $white;
+  padding-left: 20px;
+  border-radius: 16px 16px 0 0;
+}
+
+.title_note_hive {
+  background-color: $brown;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 0;
+  margin-top: 10px;
+  color: $white;
+  padding-left: 10px;
+  padding-right: 2px;
+  border-radius: 16px 16px 0 0;
+}
+
+.title_hive {
+  background-color: $brown;
+  width: 95vw ;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 0;
+  color: $white;
+  padding-left: 20px;
+  border-radius: 16px 16px 0 0;
+}

@@ -1,53 +1,5 @@
-
-
-.background_welcome {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-image: url("../../Assets/WelcomeBackground.svg");
-  height: 100vh;
-
-  width: 100vw;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.background_login {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-image: url("../../Assets/LoginBackground.svg");
-  height: 100vh;
-  width: 100vw;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.background {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: white;
-  height: calc(100vh - 64px);
-  width: 100vw;
-}
-
-.background_calendar {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  margin-top: 0;
-  background-color: $beige;
-  height: calc(100vh - 190px);
-  width: 90vw;
-  overflow-y: scroll;
-}
-
-
-
-
+@import "Class_title";
+@import "Class_background";
 
 .calendar_button{
   display: flex;
@@ -126,6 +78,29 @@
   overflow-y: scroll;
   margin-bottom: 15px;
 }
+
+.area_parent.hive {
+  height: 93px !important;
+  min-height: 93px !important;
+  width: 83.5% !important;
+}
+
+
+
+.hive_area {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: $dark;
+  min-height: 93px;
+  width: 95%;
+  margin: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-radius: 0 0 16px 16px;
+  overflow-y: scroll;
+}
+
 .area_parent > .content {
 
   display: flex;
@@ -134,34 +109,6 @@
   margin-left: 16px;
 }
 
-.title_day {
-  background-color: $brown;
-  width: calc(85vw - 56px);
-  margin: auto;
-  color: $white;
-  padding-left: 20px;
-  border-radius: 16px 16px 0 0;
-}
-
-.title_home {
-  background-color: $brown;
-  width: calc(90vw - 20px);
-  margin: auto;
-  margin-bottom: 0;
-  color: $white;
-  padding-left: 20px;
-  border-radius: 16px 16px 0 0;
-}
-.title_note {
-  background-color: $brown;
-  width: calc(70vw - 20px);
-  margin: auto;
-  margin-bottom: 0;
-  margin-top: 10px;
-  color: $white;
-  padding-left: 20px;
-  border-radius: 16px 16px 0 0;
-}
 
 .content > .area_child{
 
@@ -176,6 +123,14 @@
 
 .week {
   height: auto !important;
+}
+.hive {
+  height: 20px !important;
+  width: calc(100% + 12px) !important;
+}
+
+.stat_size {
+  margin: auto;
 }
 
 .area_child {

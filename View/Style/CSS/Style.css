@@ -71,6 +71,80 @@
   outline: 0px;
 }
 
+.title_day {
+  background-color: #684500;
+  width: calc(85vw - 56px);
+  margin: auto;
+  color: #E5E5E5;
+  padding-left: 20px;
+  border-radius: 16px 16px 0 0;
+}
+
+.title_day_hive {
+  background-color: #684500;
+  width: calc(79vw);
+  margin: auto;
+  margin-bottom: 0;
+  margin-top: 20px;
+  color: #E5E5E5;
+  padding-left: 20px;
+  border-radius: 16px 16px 0 0;
+}
+
+.title_home {
+  background-color: #684500;
+  width: calc(90vw - 20px);
+  margin: auto;
+  margin-bottom: 0;
+  color: #E5E5E5;
+  padding-left: 20px;
+  border-radius: 16px 16px 0 0;
+}
+
+.title_note {
+  background-color: #684500;
+  width: calc(70vw - 20px);
+  margin: auto;
+  margin-bottom: 0;
+  margin-top: 10px;
+  color: #E5E5E5;
+  padding-left: 20px;
+  border-radius: 16px 16px 0 0;
+}
+
+.title_note_hive {
+  background-color: #684500;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 0;
+  margin-top: 10px;
+  color: #E5E5E5;
+  padding-left: 10px;
+  padding-right: 2px;
+  border-radius: 16px 16px 0 0;
+}
+
+.title_hive {
+  background-color: #684500;
+  width: 95vw;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 0;
+  color: #E5E5E5;
+  padding-left: 20px;
+  border-radius: 16px 16px 0 0;
+}
+
+.background {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  height: calc(100vh - 64px);
+  width: 100vw;
+  overflow-y: scroll;
+}
+
 .background_welcome {
   display: flex;
   flex-direction: column;
@@ -95,15 +169,6 @@
   background-size: cover;
 }
 
-.background {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: white;
-  height: calc(100vh - 64px);
-  width: 100vw;
-}
-
 .background_calendar {
   display: flex;
   flex-direction: column;
@@ -113,6 +178,29 @@
   height: calc(100vh - 190px);
   width: 90vw;
   overflow-y: scroll;
+}
+
+.background_hive {
+  margin: auto;
+  margin-top: 0;
+  background-color: #FBEFAE;
+  height: calc(100vh - 190px);
+  width: 95vw;
+  overflow-y: scroll;
+}
+
+.background_center {
+  display: flex !important;
+  flex-direction: column;
+  background-color: #FBEFAE;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.background_scrollable {
+  overflow-y: scroll !important;
+  text-align: center;
 }
 
 .calendar_button {
@@ -192,41 +280,31 @@
   margin-bottom: 15px;
 }
 
+.area_parent.hive {
+  height: 93px !important;
+  min-height: 93px !important;
+  width: 83.5% !important;
+}
+
+.hive_area {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #343223;
+  min-height: 93px;
+  width: 95%;
+  margin: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-radius: 0 0 16px 16px;
+  overflow-y: scroll;
+}
+
 .area_parent > .content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-left: 16px;
-}
-
-.title_day {
-  background-color: #684500;
-  width: calc(85vw - 56px);
-  margin: auto;
-  color: #E5E5E5;
-  padding-left: 20px;
-  border-radius: 16px 16px 0 0;
-}
-
-.title_home {
-  background-color: #684500;
-  width: calc(90vw - 20px);
-  margin: auto;
-  margin-bottom: 0;
-  color: #E5E5E5;
-  padding-left: 20px;
-  border-radius: 16px 16px 0 0;
-}
-
-.title_note {
-  background-color: #684500;
-  width: calc(70vw - 20px);
-  margin: auto;
-  margin-bottom: 0;
-  margin-top: 10px;
-  color: #E5E5E5;
-  padding-left: 20px;
-  border-radius: 16px 16px 0 0;
 }
 
 .content > .area_child {
@@ -240,6 +318,15 @@
 
 .week {
   height: auto !important;
+}
+
+.hive {
+  height: 20px !important;
+  width: calc(100% + 12px) !important;
+}
+
+.stat_size {
+  margin: auto;
 }
 
 .area_child {
