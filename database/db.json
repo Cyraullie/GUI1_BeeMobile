@@ -1,61 +1,56 @@
-{
-    "users" : [
+[
+  {
+    "name": "Mathieu",
+    "password": "Pa$$w0rd",
+    "hives": {
+      "name": "ruche 1"
+    }
+  },
+  {
+    "userid": 2,
+    "name": "Cyril",
+    "password": "Pa$$w0rd",
+    "hives": {
+      "name": "ruche 1",
+      "logs": [
         {
-            "userid": 1,
-                    "name": "Mathieu",
-                    "password": "Pa$$w0rd",
-                    "hives" :
-                    {
-                        "name": "ruche 1"
-                    }
+          "text": "woula",
+          "date": "07/12/2021"
         },
         {
-            "userid": 2,
-                "name": "Cyril",
-                "password": "Pa$$w0rd",
-                "hives" :
-                {
-                    "name": "ruche 1",
-                    "logs": [
-                        {
-                            "text": "woula",
-                            "date": "07/12/2021"
-                        },
-                        {
-                            "text": "woula",
-                            "date": "08/12/2021"
-                        }
-                    ],
-                    "stats": [
-                        {
-                            "weight": 5,
-                            "humidity": 5,
-                            "temperature": 5,
-                            "date": "07/12/2021"
-                        },
-                        {
-                            "weight": 5,
-                            "humidity": 5,
-                            "temperature": 5,
-                            "date": "08/12/2021 "
-                        }
-                    ]
-                },
-                "calendars": {
-                    "months": {
-                        "name": "Janvier",
-                        "weeks": {
-                            "number": 13,
-                            "days": {
-                                "name": "lundi",
-                                "reminders": {
-                                    "hours": "13h",
-                                    "description": "ok"
-                                }
-                            }
-                        }
-                    }
-                }
+          "text": "woula",
+          "date": "08/12/2021"
+        }
+      ],
+      "stats": [
+        {
+          "weight": 5,
+          "humidity": 5,
+          "temperature": 5,
+          "date": "07/12/2021"
+        },
+        {
+          "weight": 5,
+          "humidity": 5,
+          "temperature": 5,
+          "date": "08/12/2021 "
+        }
+      ]
+    },
+    "calendars": {
+      "months": {
+        "name": "Janvier",
+        "weeks": {
+          "number": 13,
+          "days": {
+            "name": "lundi",
+            "reminders": {
+              "hours": "13h",
+              "description": "ok"
             }
-    ]
-}
+          }
+        }
+      }
+    }
+  }
+]
