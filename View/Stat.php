@@ -7,7 +7,9 @@ ob_start();
     <div class="background">
         <div class="background_scrollable">
 
-
+            <?php foreach ($collection as $user){ ?>
+                <?= dd($user) ?>
+            <?php } ?>
             <button class="accordion title_hive">Ruche 1</button>
             <div class="panel background_hive">
                 <div class="panel background_center">
