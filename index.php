@@ -1,6 +1,7 @@
 <?php
 require 'vendor/autoload.php';
 session_start();
+
 $action = null;
 
 include "Controller/StatsController.php";
