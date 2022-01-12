@@ -13,7 +13,7 @@ class StatsController{
 
     function index() {
 
-        $this->collection->find(array(), array('name' => "Cyril"));
+        $user = $this->collection->find(['name'=>"Cyril"]);
         require "View/Stat.php";
     }
 }
