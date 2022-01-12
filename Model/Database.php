@@ -7,7 +7,7 @@ class Database
     {
         $client = new MongoDB\Client("mongodb://localhost:27017");
         $db = $client->BeeMobile;
-        $collection = $db->user;
+        $collection = $db->users;
         return $collection;
     }
 
