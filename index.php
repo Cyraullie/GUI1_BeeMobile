@@ -1,11 +1,13 @@
 <?php
 require 'vendor/autoload.php';
-
+session_start();
 $action = null;
 
 include "Controller/StatsController.php";
+include "Controller/AuthController.php";
 
 $StatsController = new StatsController();
+$AuthController = new AuthController();
 
 if (isset($_GET['action'])){
     $action = $_GET['action'];
@@ -13,7 +15,10 @@ if (isset($_GET['action'])){
 
 switch ($action) {
     case "Login" :
-        require "View/Login.php";
+        $AuthController->indexLogin();
+        break;
+    case "CheckLogin" :
+        $AuthController->checkLogin();
         break;
     case "Register" :
         require "View/Register.php";
