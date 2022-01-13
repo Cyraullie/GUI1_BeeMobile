@@ -21,7 +21,7 @@ class AuthController
             if($_POST['password'] != $client['password']){
                 require "View/Login.php";
             }else{
-                $_SESSION['user'] = $user;
+                $_SESSION['user'] = $_POST['username'];
                 require "View/Home.php";
                 break;
             }
