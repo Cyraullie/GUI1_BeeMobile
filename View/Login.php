@@ -5,10 +5,9 @@ ob_start();
 <div class="background_login">
     <div id="login">
         <a id="title_form">Connexion</a>
-        <form method="get">
-            <input type="hidden" name="action" value="Home">
-            <input class="input_text" placeholder="Nom d'utilisateur" type="text">
-            <input class="input_text" placeholder="Mot de passe" type="password">
+        <form method="post" action="?action=CheckLogin">
+            <input id="username"  name="username" class="input_text" placeholder="Nom d'utilisateur" type="text">
+            <input id="password" name="password" class="input_text" placeholder="Mot de passe" type="password">
             <input class="input_submit" type="submit" value="Connexion">
         </form>
     </div>
