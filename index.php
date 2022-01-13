@@ -22,7 +22,10 @@ switch ($action) {
         $AuthController->checkLogin();
         break;
     case "Register" :
-        require "View/Register.php";
+        $AuthController->indexRegister();
+        break;
+    case "CheckRegister" :
+        $AuthController->checkRegister();
         break;
     case "Home" :
         require "View/Home.php";
