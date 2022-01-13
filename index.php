@@ -1,6 +1,6 @@
 <?php
 $action = null;
-
+include "Model/Hive.php";
 if (isset($_GET['action'])){
     $action = $_GET['action'];
 }
@@ -34,7 +34,9 @@ switch ($action) {
         require "View/CalendarMonth.php";
         break;
     default :
-        require "View/Welcome.php";
+        //$h = new Hive();
+        //$h->getUserHives(1);
+        require "View/phpinfo.php";
         break;
 }
 
