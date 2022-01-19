@@ -15,4 +15,10 @@ class StatsController{
         $DBuser = $this->collection->find(['name'=>$_SESSION['user']]);
         require "View/Stat.php";
     }
+
+
+    function edit(){
+
+        require "View/EditStat.php";
+    }
 }
