@@ -12,7 +12,7 @@ class StatsController{
 
     function index() {
 
-        $user = $this->collection->find(['name'=>$_SESSION['user']]);
+        $DBuser = $this->collection->find(['name'=>$_SESSION['user']]);
         require "View/Stat.php";
     }
 }
