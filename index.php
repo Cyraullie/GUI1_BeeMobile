@@ -2,15 +2,15 @@
 require 'vendor/autoload.php';
 require 'Model/Hive.php';
 require 'Model/DatabaseManager.php';
-
+require "Controller/StatsController.php";
+require "Controller/AuthController.php";
 
 session_start();
 
 $action = null;
 
 
-include "Controller/StatsController;
-include "Controller/AuthController.php";
+
 
 $StatsController = new StatsController();
 $AuthController = new AuthController();
