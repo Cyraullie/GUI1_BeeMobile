@@ -2,54 +2,56 @@
   {
     "name": "Mathieu",
     "password": "Pa$$w0rd",
-    "hives": {
-      "name": "ruche 1"
-    }
+    "hives": [
+      {
+        "hiveid": 0,
+        "name": "ruche 1"
+      }
+    ]
   },
   {
     "name": "Cyril",
     "password": "Pa$$w0rd",
-    "hives": {
-      "name": "ruche 1",
-      "logs": [
-        {
-          "text": "woula",
-          "date": "07/12/2021"
-        },
-        {
-          "text": "woula",
-          "date": "08/12/2021"
-        }
-      ],
-      "stats": [
-        {
-          "weight": 5,
-          "humidity": 5,
-          "temperature": 5,
-          "date": "07/12/2021"
-        },
-        {
-          "weight": 5,
-          "humidity": 5,
-          "temperature": 5,
-          "date": "08/12/2021 "
-        }
-      ]
-    },
-    "calendars": {
-      "months": {
-        "name": "Janvier",
-        "weeks": {
-          "number": 13,
-          "days": {
-            "name": "lundi",
-            "reminders": {
-              "hours": "13h",
-              "description": "ok"
-            }
+    "hives": [
+      {
+        "hiveid": 1,
+        "name": "ruche 1",
+        "logs": [
+          {
+            "07/12/2021": [
+              {
+                "text": "woula",
+                "hour": "10h00"
+              },
+              {
+                "text": "woula",
+                "hour": "15h00"
+              }
+            ],
+            "08/12/2021": [
+              {
+                "text": "woula",
+                "hour": "12h00"
+              }
+            ]
           }
-        }
+        ],
+        "stats": [
+          {
+            "weight": 5,
+            "humidity": 5,
+            "temperature": 5,
+            "date": "07/12/2021"
+          },
+          {
+            "weight": 5,
+            "humidity": 5,
+            "temperature": 5,
+            "date": "08/12/2021 "
+          }
+        ]
       }
-    }
+    ],
+
   }
 ]
