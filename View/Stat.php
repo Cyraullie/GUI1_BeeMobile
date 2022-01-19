@@ -1,18 +1,17 @@
 <?php
 ob_start();
-
+$user = $DBuser;
 ?>
     <script type="module" src="View/JS/Horizontal_Swiper.js" defer></script>
-
+<?php foreach ($DBuser as $user){ ?>
     <div class="background">
         <div class="background_scrollable">
-
-
-            <?php foreach ($user as $hive) { ?>
-                <button class="accordion title_hive"><?= $hive["hives"]['name'] ?></button>
+            <?php foreach ($user["hives"] as $hive) { ?>
+                <button class="accordion title_hive"><?= $hive['name'] ?></button>
                 <div class="panel background_hive">
                     <div class="panel background_center">
-                        <?php foreach ($hive['hives']['stats'] as $stat) { ?>
+
+                        <?php foreach ($hive['stats'] as $stat) { ?>
 
                         <button class="accordion title_day_hive"><?= $stat['date'] ?></button>
                         <div class=" panel area_parent hive">
@@ -55,7 +54,7 @@ ob_start();
             <?php } ?>
         </div>
     </div>
-
+<?php } ?>
 
 <?php
 $contenu = ob_get_clean();
