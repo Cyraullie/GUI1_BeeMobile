@@ -4,6 +4,7 @@ class DatabaseManager
 {
     private static $_instance = null;
 
+    private $db;
     public function __construct()
     {
     }
@@ -21,9 +22,25 @@ class DatabaseManager
     function ConnectDB()
     {
         $client = new MongoDB\Client("mongodb://localhost:27017");
-        $db = $client->BeeMobile;
-        $collection = $db->users;
+        $this->db = $client->BeeMobile;
+        $collection = $this->db->users;
         return $collection;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDb()
+    {
+        return $this->db;
+    }
+
+    /**
+     * @param mixed $db
+     */
+    public function setDb($db): void
+    {
+        $this->db = $db;
     }
 
 }

@@ -3,7 +3,7 @@
 
 abstract class Utility
 {
-    protected DatabaseManager $db;
+    public DatabaseManager $db;
 
     /**
      * @param Database $db

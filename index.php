@@ -3,17 +3,14 @@ require 'vendor/autoload.php';
 require 'Model/Hive.php';
 require 'Model/DatabaseManager.php';
 require "Controller/StatsController.php";
+require "Controller/LogsController.php";
 require "Controller/AuthController.php";
 
 session_start();
-
-$action = null;
-
-
-
-
 $StatsController = new StatsController();
 $AuthController = new AuthController();
+$LogsController = new LogsController();
+$action = null;
 
 if (isset($_GET['action'])){
     $action = $_GET['action'];
@@ -42,7 +39,7 @@ switch ($action) {
         $StatsController->index();
         break;
     case "JDB" :
-        require "View/JDB.php";
+        $LogsController->index();
         break;
     case "AgendaDay" :
         require "View/CalendarDay.php";

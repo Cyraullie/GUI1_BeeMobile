@@ -12,10 +12,10 @@ class Hive extends Utility
         parent::__construct();
     }
 
-    public function getUserHives($userId){
+    public function getUserHives($username){
 
-    $collection = $this->db->ConnectDB();
-    $user = $collection->find(['userid' => $userId]);
+        $user = $this->db->connectDb()->find(['name'=>$_SESSION['user']]);
+        require "View/Stat.php";
     }
 
 
