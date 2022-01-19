@@ -216,3 +216,34 @@
   margin-right: 5px;
   margin-left: 5px;
 }
+
+.form{
+  padding: 18px;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  margin-top: 20px;
+}
+
+.form.hive_area{
+  display: flex;
+  flex-direction: column !important;
+  margin-top: 0;
+  width: 83.5%;
+}
+
+.stat_form_size{
+  width: 90%;
+  margin: auto;
+}
+
+input.form{
+  width: 91% !important;
+  margin-top: 0;
+}
+
+form{
+  margin: 0 !important;
+  width: 100% !important;
+}
