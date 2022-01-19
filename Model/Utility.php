@@ -1,12 +1,12 @@
 <?php
-include "Model/DatabaseManager.php";
+namespace BeeMobile\Model;
 
 abstract class Utility
 {
     protected DatabaseManager $db;
 
     /**
-     * @param Database $db
+     * @param DatabaseManager $db
      */
     protected function __construct()
     {

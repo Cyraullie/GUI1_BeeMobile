@@ -1,5 +1,6 @@
 <?php
-
+namespace BeeMobile\Controller;
+use BeeMobile\Model\DatabaseManager;
 class AuthController
 {
     private $collection;

@@ -1,5 +1,8 @@
 <?php
+namespace BeeMobile\Controller;
 require 'vendor/autoload.php';
+use BeeMobile\Controller\StatsController;
+use BeeMobile\Controller\AuthController;
 session_start();
 
 $action = null;

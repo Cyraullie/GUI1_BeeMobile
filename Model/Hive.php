@@ -1,4 +1,6 @@
 <?php
+namespace BeeMobile\Model;
+
 include "Model/Utility.php";
 class Hive extends Utility
 {
