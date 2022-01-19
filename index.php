@@ -41,6 +41,9 @@ switch ($action) {
     case "Stats" :
         $StatsController->index();
         break;
+    case "EditStat" :
+        $StatsController->edit();
+        break;
     case "JDB" :
         require "View/JDB.php";
         break;
