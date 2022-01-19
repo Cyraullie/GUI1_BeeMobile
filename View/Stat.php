@@ -1,9 +1,7 @@
 <?php
 ob_start();
-$user = $DBuser;
 ?>
     <script type="module" src="View/JS/Horizontal_Swiper.js" defer></script>
-<?php foreach ($DBuser as $user){ ?>
     <div class="background">
         <div class="background_scrollable">
             <?php foreach ($user["hives"] as $hive) { ?>
@@ -54,7 +52,6 @@ $user = $DBuser;
             <?php } ?>
         </div>
     </div>
-<?php } ?>
 
 <?php
 $contenu = ob_get_clean();
