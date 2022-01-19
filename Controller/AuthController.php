@@ -47,7 +47,7 @@ class AuthController
         }
 
         if ($_POST['password'] == $_POST['confirm_password']) {
-            $this->collection->insertOne(['name' => $_POST['username'], 'password' => $_POST['password']]);
+            $this->collection->insertOne(['name' => $_POST['username'], 'password' => $_POST['password'], 'hives' => [], 'calendars' => []]);
             $_SESSION['user'] = $_POST['username'];
             require "View/Home.php";
         } else {
