@@ -9,7 +9,7 @@ session_start();
 $action = null;
 
 
-include "Controller/StatsController.php";
+include "Controller/StatsController;
 include "Controller/AuthController.php";
 
 $StatsController = new StatsController();
@@ -54,6 +54,7 @@ switch ($action) {
         require "View/CalendarMonth.php";
         break;
     default :
+
         $h = new Hive();
         $h->getUserHives(1);
         require "View/Welcome.php";

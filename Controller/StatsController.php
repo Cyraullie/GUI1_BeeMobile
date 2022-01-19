@@ -1,6 +1,5 @@
 <?php
 
-
 class StatsController{
 
     private $collection;
