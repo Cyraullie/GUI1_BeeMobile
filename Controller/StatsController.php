@@ -1,35 +1,48 @@
 <?php
 
-class StatsController{
+class StatsController
+{
 
-    private $collection;
+    private $db;
 
     public function __construct()
     {
-        $DB = new DatabaseManager();
-        $this->collection = $DB->ConnectDB();
+        $NewDb = new DatabaseManager();
+        $this->db = $NewDb->ConnectDB();
     }
 
-    function index() {
+    function index()
+    {
 
-        $user = $this->collection->findOne(['name'=>$_SESSION['user']]);
+        $user = $this->db->users->findOne(['name' => $_SESSION['user']]);
+        $hives = $this->db->hives->find(['userid' => $user['userid']]);
         require "View/Stat.php";
     }
 
 
-    function edit(){
-        $user = $this->collection->findOne(['name'=>$_SESSION['user']]);
-        for ($i = 0; $i < count($user['hives']); $i++){
-
-            if($user['hives'][$i]['name'] == substr($_GET['hive'], 1, -1)) {
-                $hive = $user['hives'][$i];
-                for ($x = 0; $x < count($hive["stats"]); $x++)
-                if ($hive["stats"][$i]['date'] == substr($_GET['stat'], 1, -1)){
-                    $stats = $hive["stats"][$i];
-                }
+    function edit()
+    {
+        $AllStats = $this->db->stats->find(['hiveid' => intval($_GET['hive'])]);
+        foreach ($AllStats as $stat){
+            if($stat['date'] == substr($_GET['stat'], 1, -1)){
+                $stats = $stat;
+                break;
             }
         }
-
         require "View/EditStat.php";
+    }
+
+    function update()
+    {
+        $this->db->stats->updateOne(
+            ['_id' => new MongoDB\BSON\ObjectID($_POST['stat'])],
+            ['$set' => ["humidity" => intval($_POST['humidity']),
+                        "temperature" => intval($_POST['temp']),
+                        "weight" => intval($_POST['weight']),
+
+
+                ]]
+        );
+        $this->index();
     }
 }

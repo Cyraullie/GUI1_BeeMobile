@@ -9,9 +9,6 @@ session_start();
 
 $action = null;
 
-
-
-
 $StatsController = new StatsController();
 $AuthController = new AuthController();
 
@@ -41,8 +38,11 @@ switch ($action) {
     case "Stats" :
         $StatsController->index();
         break;
-    case "EditStat" :
+    case "EditStats" :
         $StatsController->edit();
+        break;
+    case "UpdateStats" :
+        $StatsController->update();
         break;
     case "JDB" :
         require "View/JDB.php";
@@ -58,8 +58,8 @@ switch ($action) {
         break;
     default :
 
-        $h = new Hive();
-        $h->getUserHives(1);
+        //$h = new Hive();
+        //$h->getUserHives(1);
         require "View/Welcome.php";
         break;
 }
