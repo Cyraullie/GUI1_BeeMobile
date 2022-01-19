@@ -13,7 +13,7 @@ $user = $DBuser;
 
                         <?php foreach ($hive['stats'] as $stat) { ?>
 
-                        <button class="accordion title_day_hive"><?= $stat['date'] ?></button>
+                        <button class="accordion title_day_hive"><?= $stat['date'] ?> <a class="white-icon fa-2x" href="?action=EditStat&hive=<<?= $hive['hives']['name'] ?>>&stat=<<?= $stat['date'] ?>>"><i class="fas fa-edit"></i></a></button>
                         <div class=" panel area_parent hive">
                             <div class="hive_area">
                                 <div class="stat_size">
