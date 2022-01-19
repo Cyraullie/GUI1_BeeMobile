@@ -1,5 +1,5 @@
 <?php
-include "Model/DatabaseManager.php";
+
 
 abstract class Utility
 {

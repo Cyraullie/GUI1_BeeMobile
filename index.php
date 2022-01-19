@@ -1,5 +1,9 @@
 <?php
 require 'vendor/autoload.php';
+require 'Model/Hive.php';
+require 'Model/DatabaseManager.php';
+
+
 session_start();
 
 $action = null;
@@ -50,9 +54,9 @@ switch ($action) {
         require "View/CalendarMonth.php";
         break;
     default :
-        //$h = new Hive();
-        //$h->getUserHives(1);
-        require "View/phpinfo.php";
+        $h = new Hive();
+        $h->getUserHives(1);
+        require "View/Welcome.php";
         break;
 }
 

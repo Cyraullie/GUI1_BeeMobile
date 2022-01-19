@@ -1,5 +1,6 @@
 <?php
-include "Model/Utility.php";
+require_once 'Model/Utility.php';
+
 class Hive extends Utility
 {
     private string $name;

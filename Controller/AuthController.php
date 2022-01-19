@@ -6,7 +6,7 @@ class AuthController
 
     public function __construct()
     {
-        $DB = new Database();
+        $DB = new DatabaseManager();
         $this->collection = $DB->ConnectDB();
     }
 
