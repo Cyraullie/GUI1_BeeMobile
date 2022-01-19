@@ -52,7 +52,7 @@ switch ($action) {
     default :
         //$h = new Hive();
         //$h->getUserHives(1);
-        require "View/phpinfo.php";
+        require "View/Welcome.php";
         break;
 }
 
