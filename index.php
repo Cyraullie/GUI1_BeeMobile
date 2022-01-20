@@ -1,18 +1,29 @@
 <?php
 require 'vendor/autoload.php';
 
-require 'Model/DatabaseManager.php';
-require "Controller/StatsController.php";
-require "Controller/LogsController.php";
+require "Model/DatabaseManager.php";
+
 require "Controller/AuthController.php";
+require "Controller/StatsController.php";
+
+/*
+
+require "Controller/LogsController.php";
+
 require "Controller/HiveController.php";
+*/
 
 session_start();
 
-$StatsController = new StatsController();
-$HiveController = new HiveController();
+
 $AuthController = new AuthController();
+$StatsController = new StatsController();
+
+/*
+
+$HiveController = new HiveController();
 $LogsController = new LogsController();
+*/
 $action = null;
 
 if (isset($_GET['action'])){
