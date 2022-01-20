@@ -6,6 +6,7 @@ ob_start();
        <a class="buttonIcon" href="?action=CreateHive"><i class="fas fa-plus"></i></a>
         <div class="background_scrollable">
             <?php foreach ($hives as $hive) {?>
+                    <?= var_dump($hive) ?>
                 <button class="accordion title_hive"><?= $hive['name'] ?></button>
                 <div class="panel background_hive">
                     <div class="panel background_center">

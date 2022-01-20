@@ -54,8 +54,6 @@ class AuthController
             }
         }
 
-        var_dump($_POST);
-
         if ($_POST['password'] == $_POST['confirm_password'] AND !$alreadyExist) {
             $this->users->GetUsers()->insertOne(['userid' => $id,'name' => $_POST['username'], 'password' => $_POST['password']]);
             $_SESSION['user'] = $id;
