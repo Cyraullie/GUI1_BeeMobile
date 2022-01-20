@@ -1,16 +1,16 @@
 <?php
 require 'vendor/autoload.php';
-require 'Model/Hive.php';
+
 require 'Model/DatabaseManager.php';
 require "Controller/StatsController.php";
 require "Controller/LogsController.php";
 require "Controller/AuthController.php";
-
-include "Controller/StatsController.php";
+require "Controller/HiveController.php";
 
 session_start();
 
 $StatsController = new StatsController();
+$HiveController = new HiveController();
 $AuthController = new AuthController();
 $LogsController = new LogsController();
 $action = null;
@@ -59,9 +59,13 @@ switch ($action) {
     case "AgendaMonth" :
         require "View/CalendarMonth.php";
         break;
+    case "CreateHive" :
+        $HiveController->create();
+        break;
+    case "SaveHive" :
+        $HiveController->save();
+        break;
     default :
-        $h = new Hive();
-        $h->getUserHives(1);
         require "View/Welcome.php";
         break;
 }
