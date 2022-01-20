@@ -66,7 +66,7 @@ switch ($action) {
         $HiveController->save();
         break;
     default :
-        require "View/Welcome.php";
+        $AuthController->indexGuest();
         break;
 }
 
