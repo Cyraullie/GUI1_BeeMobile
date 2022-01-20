@@ -38,6 +38,12 @@ switch ($action) {
     case "Stats" :
         $StatsController->index();
         break;
+    case "EditStats" :
+        $StatsController->edit();
+        break;
+    case "UpdateStats" :
+        $StatsController->update();
+        break;
     case "JDB" :
         $LogsController->index();
         break;
@@ -52,8 +58,8 @@ switch ($action) {
         break;
     default :
 
-        $h = new Hive();
-        $h->getUserHives(1);
+        //$h = new Hive();
+        //$h->getUserHives(1);
         require "View/Welcome.php";
         break;
 }

@@ -7,6 +7,7 @@ class DatabaseManager
     private $db;
     public function __construct()
     {
+
     }
 
     public static function getInstance()
@@ -22,9 +23,8 @@ class DatabaseManager
     function ConnectDB()
     {
         $client = new MongoDB\Client("mongodb://localhost:27017");
-        $this->db = $client->BeeMobile;
-        $collection = $this->db->users;
-        return $collection;
+        $db = $client->BeeMobile;
+        return $db;
     }
 
     /**

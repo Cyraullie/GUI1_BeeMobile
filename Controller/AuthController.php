@@ -3,11 +3,13 @@
 class AuthController
 {
     private $collection;
+    private $db;
 
     public function __construct()
     {
-        $DB = new DatabaseManager();
-        $this->collection = $DB->ConnectDB();
+        $NewDb = new DatabaseManager();
+        $this->db = $NewDb->ConnectDB();
+        $this->collection = $this->db->users;
     }
 
     function indexLogin()
@@ -17,17 +19,13 @@ class AuthController
 
     function checkLogin()
     {
-        $user = $this->collection->find(['name' => $_POST['username']]);
-
-        foreach ($user as $client) {
-            if ($_POST['password'] != $client['password']) {
+        $user = $this->collection->findOne(['name' => $_POST['username']]);
+            if ($_POST['password'] != $user['password']) {
                 require "View/Login.php";
             } else {
                 $_SESSION['user'] = $_POST['username'];
                 require "View/Home.php";
-                break;
             }
-        }
         require "View/Login.php";
     }
 
@@ -46,8 +44,14 @@ class AuthController
             }
         }
 
+        $users = $this->db->users->find();
+        $id = 0;
+        foreach ($users as $client){
+           $id++;
+        }
+
         if ($_POST['password'] == $_POST['confirm_password']) {
-            $this->collection->insertOne(['name' => $_POST['username'], 'password' => $_POST['password'], 'hives' => [], 'calendars' => []]);
+            $this->collection->insertOne(['userid' => $id,'name' => $_POST['username'], 'password' => $_POST['password']]);
             $_SESSION['user'] = $_POST['username'];
             require "View/Home.php";
         } else {

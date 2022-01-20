@@ -4,6 +4,7 @@
     "password": "Pa$$w0rd",
     "hives": [
       {
+        "hiveid": 0,
         "name": "ruche 1"
       }
     ]
@@ -13,6 +14,7 @@
     "password": "Pa$$w0rd",
     "hives": [
       {
+        "hiveid": 1,
         "name": "ruche 1",
         "logs": [
           {
@@ -50,22 +52,6 @@
         ]
       }
     ],
-    "calendars": [
-      {
-        "months": {
-          "name": "Janvier",
-          "weeks": {
-            "number": 13,
-            "days": {
-              "name": "lundi",
-              "reminders": {
-                "hours": "13h",
-                "description": "ok"
-              }
-            }
-          }
-        }
-      }
-    ]
+
   }
 ]
