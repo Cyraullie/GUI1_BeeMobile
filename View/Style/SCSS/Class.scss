@@ -260,3 +260,28 @@ form{
   margin: 0 !important;
   width: 100% !important;
 }
+
+.form_area{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+.banner_message{
+  width: 100%;
+  height: 40px;
+}
+
+.error {
+  background-color: lightcoral;
+}
