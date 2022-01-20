@@ -3,14 +3,11 @@
 
 abstract class Utility
 {
-    public DatabaseManager $db;
+    public $db;
 
-    /**
-     * @param Database $db
-     */
     protected function __construct()
     {
-        $this->db = new DatabaseManager();
+        $this->db = DatabaseManager::ConnectDB();
     }
 
     function GetUsers(){
