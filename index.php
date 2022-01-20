@@ -6,7 +6,10 @@ require "Controller/StatsController.php";
 require "Controller/LogsController.php";
 require "Controller/AuthController.php";
 
+include "Controller/StatsController.php";
+
 session_start();
+
 $StatsController = new StatsController();
 $AuthController = new AuthController();
 $LogsController = new LogsController();
@@ -57,9 +60,8 @@ switch ($action) {
         require "View/CalendarMonth.php";
         break;
     default :
-
-        //$h = new Hive();
-        //$h->getUserHives(1);
+        $h = new Hive();
+        $h->getUserHives(1);
         require "View/Welcome.php";
         break;
 }

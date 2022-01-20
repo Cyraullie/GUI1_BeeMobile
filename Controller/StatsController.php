@@ -7,6 +7,7 @@ class StatsController
 
     public function __construct()
     {
+
         $NewDb = new DatabaseManager();
         $this->db = $NewDb->ConnectDB();
     }
