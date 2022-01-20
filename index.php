@@ -5,25 +5,18 @@ require "Model/DatabaseManager.php";
 
 require "Controller/AuthController.php";
 require "Controller/StatsController.php";
-
-/*
-
+require "Controller/HiveController.php";
 require "Controller/LogsController.php";
 
-require "Controller/HiveController.php";
-*/
 
 session_start();
 
 
 $AuthController = new AuthController();
 $StatsController = new StatsController();
-
-/*
-
 $HiveController = new HiveController();
 $LogsController = new LogsController();
-*/
+
 $action = null;
 
 if (isset($_GET['action'])){
