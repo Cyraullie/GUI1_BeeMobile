@@ -19,7 +19,7 @@ class StatsController
     function index()
     {
         $hives = $this->hives->GetHives()->find(['userid' => $_SESSION['user']]);
-        var_dump($_SESSION['user']);
+        $stats = $this->stats->GetStats();
         require "View/Stat.php";
     }
 
