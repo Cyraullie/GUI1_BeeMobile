@@ -4,6 +4,7 @@ require 'vendor/autoload.php';
 $action = null;
 
 
+
 include "Controller/StatsController.php";
 
 $StatsController = new StatsController();
@@ -41,8 +42,8 @@ switch ($action) {
         require "View/CalendarMonth.php";
         break;
     default :
-        //$h = new Hive();
-        //$h->getUserHives(1);
+        $h = new Hive();
+        $h->getUserHives(1);
         require "View/phpinfo.php";
         break;
 }
