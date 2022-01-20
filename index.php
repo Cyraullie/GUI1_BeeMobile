@@ -1,13 +1,19 @@
 <?php
 require 'vendor/autoload.php';
-
-$action = null;
-
-
+require 'Model/Hive.php';
+require 'Model/DatabaseManager.php';
+require "Controller/StatsController.php";
+require "Controller/LogsController.php";
+require "Controller/AuthController.php";
 
 include "Controller/StatsController.php";
 
+session_start();
+
 $StatsController = new StatsController();
+$AuthController = new AuthController();
+$LogsController = new LogsController();
+$action = null;
 
 if (isset($_GET['action'])){
     $action = $_GET['action'];
@@ -15,10 +21,16 @@ if (isset($_GET['action'])){
 
 switch ($action) {
     case "Login" :
-        require "View/Login.php";
+        $AuthController->indexLogin();
+        break;
+    case "CheckLogin" :
+        $AuthController->checkLogin();
         break;
     case "Register" :
-        require "View/Register.php";
+        $AuthController->indexRegister();
+        break;
+    case "CheckRegister" :
+        $AuthController->checkRegister();
         break;
     case "Home" :
         require "View/Home.php";
@@ -29,8 +41,14 @@ switch ($action) {
     case "Stats" :
         $StatsController->index();
         break;
+    case "EditStats" :
+        $StatsController->edit();
+        break;
+    case "UpdateStats" :
+        $StatsController->update();
+        break;
     case "JDB" :
-        require "View/JDB.php";
+        $LogsController->index();
         break;
     case "AgendaDay" :
         require "View/CalendarDay.php";
@@ -44,7 +62,7 @@ switch ($action) {
     default :
         $h = new Hive();
         $h->getUserHives(1);
-        require "View/phpinfo.php";
+        require "View/Welcome.php";
         break;
 }
 

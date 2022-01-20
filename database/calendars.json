@@ -1,0 +1,17 @@
+[
+  {
+    "months": {
+      "name": "Janvier",
+      "weeks": {
+        "number": 13,
+        "days": {
+          "name": "lundi",
+          "reminders": {
+            "hours": "13h",
+            "description": "ok"
+          }
+        }
+      }
+    }
+  }
+]
