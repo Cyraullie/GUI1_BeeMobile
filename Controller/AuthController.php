@@ -20,12 +20,13 @@ class AuthController
 
     function checkLogin()
     {
-        $user = $this->users->GetUsers()->findOne(['name' => $_POST['username']]);
+        $users = $this->users->GetUsers()->findOne(['name' => $_POST['username']]);
 
-            if ($_POST['password'] != $user->password) {
+
+            if ($_POST['password'] != $users->password) {
                 require "View/Login.php";
             } else {
-                $_SESSION['user'] = $user->userid;
+                $_SESSION['user'] = $users->userid;
                 require "View/Home.php";
             }
         require "View/Login.php";
