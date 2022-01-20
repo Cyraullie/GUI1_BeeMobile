@@ -49,6 +49,6 @@ class HiveController
 
     function update()
     {
-       
+
     }
 }
