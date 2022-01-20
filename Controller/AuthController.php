@@ -1,15 +1,16 @@
 <?php
-
+require_once "Model/User.php";
 class AuthController
 {
-    private $collection;
-    private $db;
+    private User $users;
 
     public function __construct()
     {
-        $NewDb = new DatabaseManager();
-        $this->db = $NewDb->ConnectDB();
-        $this->collection = $this->db->users;
+        $this->users = new User();
+    }
+
+    function indexGuest(){
+        require "View/Welcome.php";
     }
 
     function indexLogin()
@@ -19,8 +20,9 @@ class AuthController
 
     function checkLogin()
     {
-        $user = $this->collection->findOne(['name' => $_POST['username']]);
-            if ($_POST['password'] != $user['password']) {
+        $user = $this->users->GetUsers()->findOne(['name' => $_POST['username']]);
+
+            if ($_POST['password'] != $user->getPassword) {
                 require "View/Login.php";
             } else {
                 $_SESSION['user'] = $_POST['username'];
@@ -36,26 +38,32 @@ class AuthController
 
     function checkRegister()
     {
-        $user = $this->collection->find(['name' => $_POST['username']]);
+        $user = $this->users->GetUsers()->findOne(['name' => $_POST['username']]);
 
-        foreach ($user as $client) {
-            if ($client['name'] != null) {
-                require "View/Login.php";
+        if ($user->getName != null) {
+            require "View/Login.php";
+        }
+
+        $users = $this->users->GetUsers()->find();
+        $id = 0;
+        $alreadyExist = false;
+        foreach ($users as $client){
+           $id++;
+            if($client->getName == $_POST['username']){
+                $alreadyExist = true;
             }
         }
 
-        $users = $this->db->users->find();
-        $id = 0;
-        foreach ($users as $client){
-           $id++;
-        }
+        var_dump($_POST);
 
-        if ($_POST['password'] == $_POST['confirm_password']) {
-            $this->collection->insertOne(['userid' => $id,'name' => $_POST['username'], 'password' => $_POST['password']]);
-            $_SESSION['user'] = $_POST['username'];
-            require "View/Home.php";
-        } else {
-            require "View/Register.php";
+        if ($_POST['password'] == $_POST['confirm_password'] AND !$alreadyExist) {
+            $this->users->GetUsers()->insertOne(['userid' => $id,'name' => $_POST['username'], 'password' => $_POST['password']]);
+            $_SESSION['user'] = $this->users->getUserid;
+            header( "Location: ?action=Home");
+        }elseif ($alreadyExist){
+            header( "Location: ?action=Login");
+        }else {
+            header( "Location: ?action=Register");
         }
     }
 }
