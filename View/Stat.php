@@ -6,11 +6,12 @@ ob_start();
        <a class="buttonIcon" href="?action=CreateHive"><i class="fas fa-plus"></i></a>
         <div class="background_scrollable">
             <?php foreach ($hives as $hive) {?>
+
                 <button class="accordion title_hive"><?= $hive['name'] ?></button>
                 <div class="panel background_hive">
                     <div class="panel background_center">
 
-                        <?php foreach ($this->db->stats->find(['hiveid' => $hive['hiveid']]) as $stat) { ?>
+                        <?php foreach ($stats->find(['hiveid' => $hive['hiveid']]) as $stat) { ?>
 
                         <button class="accordion title_day_hive"><?= $stat['date'] ?> <a class="white-icon fa-2x" href="?action=EditStats&hive=<?= $hive['hiveid'] ?>&stat=<<?= $stat['date'] ?>>"><i class="fas fa-edit"></i></a></button>
                         <div class=" panel area_parent hive">
