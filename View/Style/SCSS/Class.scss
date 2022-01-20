@@ -1,5 +1,3 @@
-@import "Class_title";
-@import "Class_background";
 
 .calendar_button{
   display: flex;
@@ -29,6 +27,21 @@
   width: 50vw;
   border-radius: 32px;
   padding: 20px;
+  background-color: $brown;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.buttonIcon{
+  text-align: center;
+  margin-left: auto;
+  margin-right: 10px;
+  margin-top: 10px;
+  color: $white !important;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 10px;
+  width: 24px;
   background-color: $brown;
   font-size: 20px;
   font-weight: bold;
@@ -246,4 +259,29 @@ input.form{
 form{
   margin: 0 !important;
   width: 100% !important;
+}
+
+.form_area{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+.banner_message{
+  width: 100%;
+  height: 40px;
+}
+
+.error {
+  background-color: lightcoral;
 }
