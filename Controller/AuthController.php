@@ -7,9 +7,7 @@ class AuthController
 
     public function __construct()
     {
-        $NewDb = new DatabaseManager();
-        $this->db = $NewDb->ConnectDB();
-        $this->collection = $this->db->users;
+
     }
 
     function indexLogin()
@@ -19,7 +17,10 @@ class AuthController
 
     function checkLogin()
     {
-        $user = $this->collection->findOne(['name' => $_POST['username']]);
+        $this->db = DatabaseManager::ConnectDB();
+        $this->collection = $this->db->users;
+
+        $user = $this->db->users->findOne(['name' => $_POST['username']]);
             if ($_POST['password'] != $user['password']) {
                 require "View/Login.php";
             } else {
@@ -52,7 +53,7 @@ class AuthController
 
         if ($_POST['password'] == $_POST['confirm_password']) {
             $this->collection->insertOne(['userid' => $id,'name' => $_POST['username'], 'password' => $_POST['password']]);
-            $_SESSION['user'] = $_POST['username'];
+            $_SESSION['user'] = $_POST['userid'];
             require "View/Home.php";
         } else {
             require "View/Register.php";

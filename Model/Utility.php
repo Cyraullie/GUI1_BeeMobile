@@ -3,14 +3,14 @@
 
 abstract class Utility
 {
-    public DatabaseManager $db;
+    public $db;
 
     /**
      * @param Database $db
      */
     protected function __construct()
     {
-        $this->db = new DatabaseManager();
+        $this->db = DatabaseManager::ConnectDB();
     }
 
     function GetUsers(){
@@ -19,6 +19,7 @@ abstract class Utility
     }
 
     function GetHives(){
+
         if($this->db->hives == null){$this->db->createCollection("hives");}
         return $this->db->hives;
     }
