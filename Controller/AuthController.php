@@ -22,10 +22,10 @@ class AuthController
     {
         $user = $this->users->GetUsers()->findOne(['name' => $_POST['username']]);
 
-            if ($_POST['password'] != $user->getPassword) {
+            if ($_POST['password'] != $user->password) {
                 require "View/Login.php";
             } else {
-                $_SESSION['user'] = $_POST['username'];
+                $_SESSION['user'] = $user->userid;
                 require "View/Home.php";
             }
         require "View/Login.php";
@@ -58,7 +58,7 @@ class AuthController
 
         if ($_POST['password'] == $_POST['confirm_password'] AND !$alreadyExist) {
             $this->users->GetUsers()->insertOne(['userid' => $id,'name' => $_POST['username'], 'password' => $_POST['password']]);
-            $_SESSION['user'] = $this->users->getUserid;
+            $_SESSION['user'] = $id;
             header( "Location: ?action=Home");
         }elseif ($alreadyExist){
             header( "Location: ?action=Login");
