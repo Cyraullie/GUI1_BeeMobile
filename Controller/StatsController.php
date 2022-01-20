@@ -1,31 +1,33 @@
 <?php
 
+require_once "Model/Stat.php";
+require_once "Model/Hive.php";
+
 class StatsController
 {
-
-    private $db;
+    private Stat $stats;
+    private User $users;
+    private Hive $hives;
 
     public function __construct()
     {
-
-        $NewDb = new DatabaseManager();
-        $this->db = $NewDb->ConnectDB();
+        $this->stats = new Stat();
+        $this->users = new User();
+        $this->hives = new Hive();
     }
 
     function index()
     {
-
-        $user = $this->db->users->findOne(['name' => $_SESSION['user']]);
-        $hives = $this->db->hives->find(['userid' => $user['userid']]);
+        $hives = $this->hives->GetHives()->find(['userid' => $_SESSION['user']]);
         require "View/Stat.php";
     }
 
 
     function edit()
     {
-        $AllStats = $this->db->stats->find(['hiveid' => intval($_GET['hive'])]);
+        $AllStats = $this->stats->GetStats()->find(['hiveid' => intval($_GET['hive'])]);
         foreach ($AllStats as $stat){
-            if($stat['date'] == substr($_GET['stat'], 1, -1)){
+            if($stat->getDate == substr($_GET['stat'], 1, -1)){
                 $stats = $stat;
                 break;
             }
@@ -35,7 +37,7 @@ class StatsController
 
     function update()
     {
-        $this->db->stats->updateOne(
+        $this->stats->GetStats()->updateOne(
             ['_id' => new MongoDB\BSON\ObjectID($_POST['stat'])],
             ['$set' => ["humidity" => intval($_POST['humidity']),
                         "temperature" => intval($_POST['temp']),
