@@ -87,152 +87,6 @@
   outline: 0px;
 }
 
-.title_day {
-  background-color: #684500;
-  width: calc(85vw - 56px);
-  margin: auto;
-  color: #E5E5E5;
-  padding-left: 20px;
-  border-radius: 16px 16px 0 0;
-}
-
-.title_day_hive {
-  background-color: #684500;
-  width: calc(79vw);
-  margin: auto;
-  margin-bottom: 0;
-  margin-top: 20px;
-  color: #E5E5E5;
-  padding-left: 20px;
-  border-radius: 16px 16px 0 0;
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-}
-
-.title_home {
-  background-color: #684500;
-  width: calc(83vw - 19px);
-  margin: auto;
-  margin-bottom: 0;
-  margin-top: 20px;
-  color: #E5E5E5;
-  padding-left: 20px;
-  border-radius: 16px 16px 0 0;
-}
-
-.title_note {
-  background-color: #684500;
-  width: calc(70vw - 20px);
-  margin: auto;
-  margin-bottom: 0;
-  margin-top: 10px;
-  color: #E5E5E5;
-  padding-left: 20px;
-  border-radius: 16px 16px 0 0;
-}
-
-.title_note_hive {
-  background-color: #684500;
-  width: 100%;
-  margin: auto;
-  margin-bottom: 0;
-  margin-top: 10px;
-  color: #E5E5E5;
-  padding-left: 10px;
-  padding-right: 2px;
-  border-radius: 16px 16px 0 0;
-}
-
-.title_hive {
-  background-color: #684500;
-  width: 95vw;
-  margin: auto;
-  margin-top: 20px;
-  margin-bottom: 0;
-  color: #E5E5E5;
-  padding-left: 20px;
-  border-radius: 16px 16px 0 0;
-}
-
-.background {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: white;
-  height: calc(100vh - 64px);
-  width: 100vw;
-  overflow-y: scroll;
-}
-
-.background_welcome {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-image: url("../../Assets/WelcomeBackground.svg");
-  height: 100vh;
-  width: 100vw;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.background_login {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-image: url("../../Assets/LoginBackground.svg");
-  height: 100vh;
-  width: 100vw;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.background_calendar {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  margin-top: 0;
-  background-color: #FBEFAE;
-  height: calc(100vh - 190px);
-  width: 90vw;
-  overflow-y: scroll;
-}
-
-.background_hive {
-  margin: auto;
-  margin-top: 0;
-  background-color: #FBEFAE;
-  height: calc(100vh - 190px);
-  width: 95vw;
-  overflow-y: scroll;
-}
-
-.background_center {
-  display: flex !important;
-  flex-direction: column;
-  background-color: #FBEFAE;
-  height: 100%;
-  width: 100%;
-  overflow-y: scroll;
-}
-
-.background_scrollable {
-  overflow-y: scroll !important;
-  text-align: center;
-}
-
-.background_photo {
-  height: calc(100vh - 190px);
-  width: 90vw;
-  margin: auto;
-  margin-top: 0;
-  text-align: center;
-  justify-content: center;
-  background-color: #FBEFAE;
-}
-
 .calendar_button {
   display: flex;
   flex-direction: row;
@@ -261,6 +115,21 @@
   width: 50vw;
   border-radius: 32px;
   padding: 20px;
+  background-color: #684500;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.buttonIcon {
+  text-align: center;
+  margin-left: auto;
+  margin-right: 10px;
+  margin-top: 10px;
+  color: #E5E5E5 !important;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 10px;
+  width: 24px;
   background-color: #684500;
   font-size: 20px;
   font-weight: bold;
@@ -498,6 +367,153 @@ form {
 /* Style the accordion panel. Note: hidden by default */
 .panel {
   display: none;
+}
+
+.background {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  height: calc(100vh - 64px);
+  width: 100vw;
+  overflow-y: scroll;
+}
+
+.background_welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url("../../Assets/WelcomeBackground.svg");
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.background_login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url("../../Assets/LoginBackground.svg");
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.background_calendar {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 0;
+  background-color: #FBEFAE;
+  height: calc(100vh - 190px);
+  width: 90vw;
+  overflow-y: scroll;
+}
+
+.background_hive {
+  margin: auto;
+  margin-top: 0;
+  background-color: #FBEFAE;
+  height: calc(100vh - 190px);
+  width: 95vw;
+  overflow-y: scroll;
+}
+
+.background_center {
+  display: flex !important;
+  flex-direction: column;
+  background-color: #FBEFAE;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.background_scrollable {
+  overflow-y: scroll !important;
+  text-align: center;
+  height: 100% !important;
+}
+
+.background_photo {
+  height: calc(100vh - 190px);
+  width: 90vw;
+  margin: auto;
+  margin-top: 0;
+  text-align: center;
+  justify-content: center;
+  background-color: #FBEFAE;
+}
+
+.title_day {
+  background-color: #684500;
+  width: calc(85vw - 56px);
+  margin: auto;
+  color: #E5E5E5;
+  padding-left: 20px;
+  border-radius: 16px 16px 0 0;
+}
+
+.title_day_hive {
+  background-color: #684500;
+  width: calc(79vw);
+  margin: auto;
+  margin-bottom: 0;
+  margin-top: 20px;
+  color: #E5E5E5;
+  padding-left: 20px;
+  border-radius: 16px 16px 0 0;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+
+.title_home {
+  background-color: #684500;
+  width: calc(83vw - 19px);
+  margin: auto;
+  margin-bottom: 0;
+  margin-top: 20px;
+  color: #E5E5E5;
+  padding-left: 20px;
+  border-radius: 16px 16px 0 0;
+}
+
+.title_note {
+  background-color: #684500;
+  width: calc(70vw - 20px);
+  margin: auto;
+  margin-bottom: 0;
+  margin-top: 10px;
+  color: #E5E5E5;
+  padding-left: 20px;
+  border-radius: 16px 16px 0 0;
+}
+
+.title_note_hive {
+  background-color: #684500;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 0;
+  margin-top: 10px;
+  color: #E5E5E5;
+  padding-left: 10px;
+  padding-right: 2px;
+  border-radius: 16px 16px 0 0;
+}
+
+.title_hive {
+  background-color: #684500;
+  width: 95vw;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 0;
+  color: #E5E5E5;
+  padding-left: 20px;
+  border-radius: 16px 16px 0 0;
 }
 
 body {
