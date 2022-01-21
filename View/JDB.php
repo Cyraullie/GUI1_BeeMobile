@@ -5,7 +5,7 @@ ob_start();
     <script type="module" src="View/JS/Horizontal_Swiper.js" defer></script>
 
     <div class="background">
-
+        <a class="buttonIcon" href="?action=CreateHive"><i class="fas fa-plus"></i></a>
         <div class="calendar_button">
             <form action="?action=JDB" method="POST">
                 <select id="hive" name="hive" class="active" onchange="this.form.submit()">

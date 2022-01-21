@@ -11,6 +11,11 @@ class LogsController
         $this->log = new Log();
     }
 
+    function create()
+    {
+        require "View/CreateLog.php";
+    }
+
     function show($hiveid)
     {
         if(is_null($hiveid)){
@@ -21,6 +26,13 @@ class LogsController
         $hives = $this->log->GetHives()->find(['userid' => $_SESSION['user']]);
         $logs = $this->log->GetLogs()->find(['hiveid' => $this->hiveid]);
         require "View/JDB.php";
+    }
+
+    function save()
+    {
+
+        $today = date("d/m/Y");
+        //if()
     }
 
 }
