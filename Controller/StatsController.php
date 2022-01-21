@@ -27,8 +27,8 @@ class StatsController
     function edit()
     {
         $AllStats = $this->stats->GetStats()->find(['hiveid' => intval($_GET['hive'])]);
-        foreach ($AllStats as $stat){
-            if($stat->getDate == substr($_GET['stat'], 1, -1)){
+        foreach ($AllStats as $stat) {
+            if ($stat->getDate == substr($_GET['stat'], 1, -1)) {
                 $stats = $stat;
                 break;
             }
@@ -41,11 +41,9 @@ class StatsController
         $this->stats->GetStats()->updateOne(
             ['_id' => new MongoDB\BSON\ObjectID($_POST['stat'])],
             ['$set' => ["humidity" => intval($_POST['humidity']),
-                        "temperature" => intval($_POST['temp']),
-                        "weight" => intval($_POST['weight']),
-
-
-                ]]
+                "temperature" => intval($_POST['temp']),
+                "weight" => intval($_POST['weight']),
+            ]]
         );
         $this->index();
     }

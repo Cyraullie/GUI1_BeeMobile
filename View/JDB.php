@@ -21,23 +21,19 @@ ob_start();
         </div>
         <div class="background_calendar">
             <?php foreach ($logs as $log): ?>
-                <button class="accordion title_day">01/10/2021</button>
+                <button class="accordion title_day"><?= $log['date'] ?></button>
                 <div class=" panel area_parent">
 
-
-                    <div class="title_note">
-                        <a> </a>
-                    </div>
-                    <div class="area_child week">
-
-                        <div class="content">
-                            <a>
-                                a
-
-                            </a>
+                    <?php foreach ($log['content'] as $content): ?>
+                        <div class="title_note">
+                            <a><?= $content['hour'] ?></a>
                         </div>
-                    </div>
-
+                        <div class="area_child week">
+                            <div class="content">
+                                <a><?= $content['text'] ?></a>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
             <?php endforeach; ?>
         </div>
