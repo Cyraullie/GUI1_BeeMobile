@@ -54,7 +54,6 @@ switch ($action) {
     case "JDB" :
 
         if(isset($_POST['hive'])){
-            var_dump($_POST["hive"]);
             $LogsController->show($_POST["hive"]);
         }else{
             $LogsController->show(null);

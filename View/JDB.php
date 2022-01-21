@@ -19,26 +19,28 @@ ob_start();
                 </select>
             </form>
         </div>
-
-
         <div class="background_calendar">
-            <!-- //foreach ($hive["hives"]["logs"] as $logs): ?>
-            <button class="accordion title_day">01/10/2021</button>
-            <div class=" panel area_parent">
-                <div class="title_note">
-                    <a> //$logs["hour"]</a>
-                </div>
-                <div class="area_child week">
+            <?php foreach ($logs as $log): ?>
+                <button class="accordion title_day">01/10/2021</button>
+                <div class=" panel area_parent">
 
-                    <div class="content">
-                        <a>
-                             //$logs["text"]
-                        </a>
+
+                    <div class="title_note">
+                        <a> </a>
                     </div>
-                </div>
-             //endforeach; ?> -->
-        </div>
+                    <div class="area_child week">
 
+                        <div class="content">
+                            <a>
+                                a
+
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            <?php endforeach; ?>
+        </div>
     </div>
 
 

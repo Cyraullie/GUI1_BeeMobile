@@ -19,7 +19,7 @@ class LogsController
             $this->hiveid = $hiveid;
         }
         $hives = $this->log->GetHives()->find(['userid' => $_SESSION['user']]);
-        //$logs = $this->log->GetLogs()->find(['hiveid'=>$hiveid]);
+        $logs = $this->log->GetLogs()->find(['hiveid' => $this->hiveid]);
         require "View/JDB.php";
     }
 
