@@ -63,7 +63,6 @@ class AuthController
             header("Location: ?action=Login");
         } else {
             header("Location: ?action=Register");
-
         }
     }
 }

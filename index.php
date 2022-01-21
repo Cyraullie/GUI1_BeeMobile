@@ -52,8 +52,10 @@ switch ($action) {
         $StatsController->update();
         break;
     case "JDB" :
-        if(isset($_GET['hiveid'])){
-            $LogsController->show($_GET['hiveid']);
+
+        if(isset($_POST['hive'])){
+            var_dump($_POST["hive"]);
+            $LogsController->show($_POST["hive"]);
         }else{
             $LogsController->show(null);
         }

@@ -4,7 +4,6 @@ require_once "Model/Log.php";
 class LogsController
 {
     private $hiveid;
-
     private $log;
 
     public function __construct()
@@ -15,14 +14,11 @@ class LogsController
     function show($hiveid)
     {
         if(is_null($hiveid)){
-            var_dump($_SESSION['user']);
-            $this->hiveid = $this->log->GetHives()->findOne(['userid'=>$_SESSION['user']]);
-            var_dump($this->hiveid);
+            $this->hiveid = $this->log->GetHives()->findOne(['userid'=>$_SESSION['user']])->hiveid;
         }else{
             $this->hiveid = $hiveid;
-            var_dump($this->hiveid);
         }
-        $hives = $this->log->GetHives()->find();
+        $hives = $this->log->GetHives()->find(['userid' => $_SESSION['user']]);
         //$logs = $this->log->GetLogs()->find(['hiveid'=>$hiveid]);
         require "View/JDB.php";
     }

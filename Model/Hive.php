@@ -9,7 +9,4 @@ class Hive extends Utility
         parent::__construct();
     }
 
-
-
-
 }
