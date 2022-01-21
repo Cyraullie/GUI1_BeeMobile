@@ -56,7 +56,12 @@ switch ($action) {
         if(isset($_POST['hive'])){
             $LogsController->show($_POST["hive"]);
         }else{
-            $LogsController->show(null);
+            if(isset($_GET['postSave'])){
+                $LogsController->show($_GET['postSave']);
+            }else{
+                $LogsController->show(null);
+            }
+
         }
 
         break;
@@ -72,8 +77,14 @@ switch ($action) {
     case "CreateHive" :
         $HiveController->create();
         break;
+    case "CreateLog" :
+        $LogsController->create();
+        break;
     case "SaveHive" :
         $HiveController->save();
+        break;
+    case "SaveLog" :
+        $LogsController->save();
         break;
     default :
         $AuthController->indexGuest();
