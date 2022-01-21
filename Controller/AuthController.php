@@ -21,10 +21,11 @@ class AuthController
         $this->collection = $this->db->users;
 
         $user = $this->db->users->findOne(['name' => $_POST['username']]);
+        var_dump($user->userid);
             if ($_POST['password'] != $user['password']) {
                 require "View/Login.php";
             } else {
-                $_SESSION['user'] = $_POST['username'];
+                $_SESSION['user'] = $user->userid;
                 require "View/Home.php";
             }
         require "View/Login.php";

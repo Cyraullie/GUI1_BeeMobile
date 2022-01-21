@@ -7,30 +7,31 @@ ob_start();
     <div class="background">
 
             <div class="calendar_button">
-                <?php foreach ($user as $hive): ?>
                 <select id="hive" class="active">
+                    <?php foreach ($user as $hive): ?>
                     <option <?= $hive["hives"]['name'] ?></option>
+                    <?php endforeach; ?>
                 </select>
-                <?php endforeach; ?>
+
             </div>
 
 
             <div class="background_calendar">
-                <?php //foreach ($hive["hives"]["logs"] as $logs): ?>
+                <!-- //foreach ($hive["hives"]["logs"] as $logs): ?>
                 <button class="accordion title_day">01/10/2021</button>
                 <div class=" panel area_parent">
                     <div class="title_note">
-                        <a><?= //$logs["hour"]?></a>
+                        <a> //$logs["hour"]</a>
                     </div>
                     <div class="area_child week">
 
                         <div class="content">
                             <a>
-                                <?= //$logs["text"]?>
+                                 //$logs["text"]
                             </a>
                         </div>
                     </div>
-                <?php //endforeach; ?>
+                 //endforeach; ?> -->
             </div>
 
     </div>

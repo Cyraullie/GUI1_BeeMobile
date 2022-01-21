@@ -15,10 +15,14 @@ class LogsController
     function show($hiveid)
     {
         if(is_null($hiveid)){
-            $this->hiveid = this->log->GetHives()->findOne(['userid'=>$_SESSION['user']])->hiveid;
+            var_dump($_SESSION['user']);
+            $this->hiveid = $this->log->GetHives()->findOne(['userid'=>$_SESSION['user']]);
+            var_dump($this->hiveid);
         }else{
             $this->hiveid = $hiveid;
+            var_dump($this->hiveid);
         }
+        $hives = $this->log->GetHives()->find();
         //$logs = $this->log->GetLogs()->find(['hiveid'=>$hiveid]);
         require "View/JDB.php";
     }
