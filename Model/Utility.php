@@ -16,6 +16,7 @@ abstract class Utility
     }
 
     function GetHives(){
+
         if($this->db->hives == null){$this->db->createCollection("hives");}
         return $this->db->hives;
     }

@@ -1,13 +1,13 @@
 <?php
 require 'vendor/autoload.php';
 
+
 require "Model/DatabaseManager.php";
 
 require "Controller/AuthController.php";
 require "Controller/StatsController.php";
 require "Controller/HiveController.php";
 require "Controller/LogsController.php";
-
 
 session_start();
 
@@ -52,7 +52,12 @@ switch ($action) {
         $StatsController->update();
         break;
     case "JDB" :
-        $LogsController->index();
+        if(isset($_GET['hiveid'])){
+            $LogsController->show($_GET['hiveid']);
+        }else{
+            $LogsController->show(null);
+        }
+
         break;
     case "AgendaDay" :
         require "View/CalendarDay.php";
