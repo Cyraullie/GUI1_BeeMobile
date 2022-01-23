@@ -22,23 +22,28 @@ class HiveController
 
     function save()
     {
-        $hives = $this->hives->GetHives()->find(['userid' => $_SESSION['user']]);
+        $hives = $this->hives->GetHives()->find();
+        $notExist = true;
         foreach ($hives as $hive) {
-            if ($hive['name'] == $_POST['hiveName']) {
-                $message = "Vous avez déjà une ruche avec ce nom";
-                $type_message = "error";
-                require "View/CreateHive.php";
+            if ($hive['userid'] === intval($_SESSION['user'])) {
+                if ($hive['name'] == $_POST['hiveName']) {
+                    $message = "Vous avez déjà une ruche avec ce nom";
+                    $type_message = "error";
+                    $notExist = false;
+                    require "View/CreateHive.php";
+                }
             }
         }
-        $hives = $this->hives->GetHives()->find();
-        foreach ($hives as $hive) {
-            $id++;
+        if($notExist) {
+            $hives = $this->hives->GetHives()->find();
+            foreach ($hives as $hive) {
+                $id++;
+            }
+
+            $this->hives->GetHives()->insertOne(['userid' => $_SESSION['user'], 'hiveid' => $id, 'name' => $_POST['hiveName']]);
+
+            header('Location: ?action=Stats');
         }
-
-        $this->hives->GetHives()->insertOne(['userid' => $_SESSION['user'], 'hiveid' => $id, 'name' => $_POST['hiveName']]);
-
-        header('Location: ?action=Stats');
-
     }
 
     function edit()
