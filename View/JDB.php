@@ -21,18 +21,32 @@ ob_start();
         </div>
         <div class="background_calendar">
             <?php foreach ($logs as $log): ?>
-                <button class="accordion title_day"><?= $log['date'] ?></button>
+                <button class="accordion title_day editButtonJDB">
+                    <?= $log['date'] ?>
+
+                </button>
+
                 <div class=" panel area_parent">
 
                     <?php foreach ($log['content'] as $content): ?>
-                        <div class="title_note">
+
+                        <div class="title_note editButtonJDB">
                             <a><?= $content['hour'] ?></a>
+                            <div>
+                                <a style="color: #E5E5E5" href="?action=EditLog&logDate=<?= $log['date'] ?>&oldHour=<?= $content['hour'] ?>">
+                                    <i class="fas fa-edit fa-2x"></i>
+                                </a>
+                                <a style="color: #E5E5E5" href="?action=DeleteLog&logDate=<?= $log['date'] ?>&oldHour=<?= $content['hour'] ?>">
+                                    <i class="fas fa-trash-alt fa-2x "></i>
+                                </a>
+                            </div>
                         </div>
                         <div class="area_child week">
                             <div class="content">
                                 <a><?= $content['text'] ?></a>
                             </div>
                         </div>
+
                     <?php endforeach; ?>
                 </div>
             <?php endforeach; ?>

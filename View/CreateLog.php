@@ -18,7 +18,7 @@ ob_start();
                                 </div>
                                 <input id="logName" name="logName" class="area_child hive content form" type="text">
                             </div>
-                            <input class="button" value="Mettre à jour" type="submit">
+                            <input class="button" value="Créer" type="submit">
                         </form>
                     </div>
                 </div>

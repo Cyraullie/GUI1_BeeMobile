@@ -80,6 +80,15 @@ switch ($action) {
     case "CreateLog" :
         $LogsController->create();
         break;
+    case "EditLog" :
+        $LogsController->edit($_GET['logDate'],$_GET['oldHour']);
+        break;
+    case "UpdateLog" :
+        $LogsController->update($_GET['logDate'],$_POST['logHour'],$_POST['logName']);
+        break;
+    case "DeleteLog" :
+        $LogsController->delete($_GET['logDate'],$_GET['oldHour']);
+        break;
     case "SaveHive" :
         $HiveController->save();
         break;

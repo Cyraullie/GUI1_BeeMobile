@@ -2970,6 +2970,9 @@ readers do not read off random characters that represent icons */
 .fa-pencil-ruler:before {
   content: "\f5ae"; }
 
+.fa-pencil-solid:before {
+  content: "\f303"; }
+
 .fa-penny-arcade:before {
   content: "\f704"; }
 
