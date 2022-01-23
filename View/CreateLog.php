@@ -5,8 +5,8 @@ ob_start();
     <div class="background">
         <div class="background_scrollable">
             <div class="background_hive">
-                <?php if (isset($message) and isset($typeMessage)) { ?>
-                    <a class="banner_message <?= $typeMessage ?>"><?= $message ?></a>
+                <?php if (isset($message) and isset($type_message)) { ?>
+                    <a class="banner_message <?= $type_message ?>"><?= $message ?></a>
                 <?php } ?>
                 <div class="form_area">
                     <a class="form title_day_hive"></a>

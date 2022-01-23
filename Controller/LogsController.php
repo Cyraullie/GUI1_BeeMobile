@@ -34,12 +34,14 @@ class LogsController
         $query = $this->log->GetLogs()->countDocuments(['hiveid' => $_SESSION['hiveid']]);
         $secondQuery = $this->log->GetLogs()->countDocuments(['date' => $today]);
         $logs = $this->log->GetLogs()->findOne(["hiveid" => $_SESSION['hiveid']]);
-        $next = false;
-        foreach ($logs['content'] as $content) {
-            if ($content['hour'] == date("h:i")) {
-                $next = false;
-            }else{
-                $next = true;
+        $next = true;
+        if ($logs != null) {
+            foreach ($logs['content'] as $content) {
+                if ($content['hour'] == date("h:i")) {
+                    $next = false;
+                } else {
+                    $next = true;
+                }
             }
         }
         if ($next) {
@@ -69,7 +71,7 @@ class LogsController
         } else {
             $message = "Veuillez patienter un petit moment avant de rajouter un log.";
             $type_message = "error";
-            header('Location: ?action=CreateLog');
+            require "View/CreateLog.php";
         }
     }
 
