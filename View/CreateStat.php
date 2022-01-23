@@ -6,6 +6,9 @@ ob_start();
     <div class="background">
         <div class="background_scrollable">
             <div class="background_hive">
+                <?php if (isset($message) and isset($type_message)) { ?>
+                    <a class="banner_message <?= $type_message ?>"><?= $message ?></a>
+                <?php } ?>
 
                 <a class="form title_day_hive"></a>
                 <div class="form hive_area">
