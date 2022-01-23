@@ -5,215 +5,51 @@ ob_start();
     <script type="module" src="View/JS/Horizontal_Swiper.js" defer></script>
 
     <div class="background">
+        <a class="buttonIcon" href="?action=CreateLog"><i class="fas fa-plus"></i></a>
         <div class="calendar_button">
-            <select id="hive" class="active">
-                <option selected>Ruche</option>
-                <option>Ruche #1</option>
-                <option>Ruche #2</option>
-            </select>
+            <form action="?action=JDB" method="POST">
+                <select id="hive" name="hive" class="active" onchange="this.form.submit()">
+                    <?php foreach ($hives as $hive): ?>
+                        <?php if ($hiveid == $hive['hiveid']) : ?>
+                            <option selected value="<?= $hive['hiveid'] ?>"> <?= $hive['name'] ?></option>
+                        <?php else: ?>
+                            <option value="<?= $hive['hiveid'] ?>"> <?= $hive['name'] ?></option>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                </select>
+            </form>
         </div>
-
-
         <div class="background_calendar">
+            <?php foreach ($logs as $log): ?>
+                <button class="accordion title_day editButtonJDB">
+                    <?= $log['date'] ?>
 
-            <button class="accordion title_day">01/10/2021</button>
-            <div class=" panel area_parent">
-                <div class="title_note">
-                    <a>10h00</a>
+                </button>
+
+                <div class=" panel area_parent">
+
+                    <?php foreach ($log['content'] as $content): ?>
+
+                        <div class="title_note editButtonJDB">
+                            <a><?= $content['hour'] ?></a>
+                            <div>
+                                <a style="color: #E5E5E5" href="?action=EditLog&logDate=<?= $log['date'] ?>&oldHour=<?= $content['hour'] ?>">
+                                    <i class="fas fa-edit fa-2x"></i>
+                                </a>
+                                <a style="color: #E5E5E5" href="?action=DeleteLog&logDate=<?= $log['date'] ?>&oldHour=<?= $content['hour'] ?>">
+                                    <i class="fas fa-trash-alt fa-2x "></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="area_child week">
+                            <div class="content">
+                                <a><?= $content['text'] ?></a>
+                            </div>
+                        </div>
+
+                    <?php endforeach; ?>
                 </div>
-                <div class="area_child week">
-
-                    <div class="content">
-                        <a>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida nibh a
-                            tellus pretium
-                            dictum.
-                            Ut sit amet purus dapibus, pulvinar mauris sed, molestie arcu. Proin ac
-                            fermentum diam, ut
-                            suscipit
-                            libero. Nam ut ipsum ut justo dignissim egestas nec nec neque. Curabitur
-                            efficitur nec tortor
-                            sed
-                            imperdiet.
-
-                        </a>
-                    </div>
-                </div>
-
-                <div class="title_note">
-                    <a>12h00</a>
-                </div>
-                <div class="area_child week">
-
-                    <div class="content">
-                        <a>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida nibh a
-                            tellus pretium
-                            dictum.
-                            Ut sit amet purus dapibus, pulvinar mauris sed, molestie arcu. Proin ac
-                            fermentum diam, ut
-                            suscipit
-                            libero. Nam ut ipsum ut justo dignissim egestas nec nec neque. Curabitur
-                            efficitur nec tortor
-                            sed
-                            imperdiet.
-
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <button class="accordion title_day">05/10/2021</button>
-            <div class="panel area_parent">
-                <div class="title_note">
-                    <a>10h00</a>
-                </div>
-                <div class="area_child week">
-
-                    <div class="content">
-                        <a>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida nibh a
-                            tellus pretium
-                            dictum.
-                            Ut sit amet purus dapibus, pulvinar mauris sed, molestie arcu. Proin ac
-                            fermentum diam, ut
-                            suscipit
-                            libero. Nam ut ipsum ut justo dignissim egestas nec nec neque. Curabitur
-                            efficitur nec tortor
-                            sed
-                            imperdiet.
-
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <button class="accordion title_day">10/10/2021</button>
-            <div class="panel area_parent">
-                <div class="title_note">
-                    <a>10h00</a>
-                </div>
-                <div class="area_child week">
-
-                    <div class="content">
-                        <a>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida nibh a
-                            tellus pretium
-                            dictum.
-                            Ut sit amet purus dapibus, pulvinar mauris sed, molestie arcu. Proin ac
-                            fermentum diam, ut
-                            suscipit
-                            libero. Nam ut ipsum ut justo dignissim egestas nec nec neque. Curabitur
-                            efficitur nec tortor
-                            sed
-                            imperdiet.
-
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <button class="accordion title_day">12/10/2021</button>
-            <div class="panel area_parent">
-                <div class="title_note">
-                    <a>10h00</a>
-                </div>
-                <div class="area_child week">
-
-                    <div class="content">
-                        <a>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida nibh a
-                            tellus pretium
-                            dictum.
-                            Ut sit amet purus dapibus, pulvinar mauris sed, molestie arcu. Proin ac
-                            fermentum diam, ut
-                            suscipit
-                            libero. Nam ut ipsum ut justo dignissim egestas nec nec neque. Curabitur
-                            efficitur nec tortor
-                            sed
-                            imperdiet.
-
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <button class="accordion title_day">15/10/2021</button>
-            <div class="panel area_parent">
-                <div class="title_note">
-                    <a>10h00</a>
-                </div>
-                <div class="area_child week">
-
-                    <div class="content">
-                        <a>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida nibh a
-                            tellus pretium
-                            dictum.
-                            Ut sit amet purus dapibus, pulvinar mauris sed, molestie arcu. Proin ac
-                            fermentum diam, ut
-                            suscipit
-                            libero. Nam ut ipsum ut justo dignissim egestas nec nec neque. Curabitur
-                            efficitur nec tortor
-                            sed
-                            imperdiet.
-
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <button class="accordion title_day">20/10/2021</button>
-            <div class="panel area_parent">
-                <div class="title_note">
-                    <a>10h00</a>
-                </div>
-                <div class="area_child week">
-
-                    <div class="content">
-                        <a>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida nibh a
-                            tellus pretium
-                            dictum.
-                            Ut sit amet purus dapibus, pulvinar mauris sed, molestie arcu. Proin ac
-                            fermentum diam, ut
-                            suscipit
-                            libero. Nam ut ipsum ut justo dignissim egestas nec nec neque. Curabitur
-                            efficitur nec tortor
-                            sed
-                            imperdiet.
-
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <button class="accordion title_day">30/10/2021</button>
-            <div class="panel area_parent">
-                <div class="title_note">
-                    <a>10h00</a>
-                </div>
-                <div class="area_child week">
-
-                    <div class="content">
-                        <a>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida nibh a
-                            tellus pretium
-                            dictum.
-                            Ut sit amet purus dapibus, pulvinar mauris sed, molestie arcu. Proin ac
-                            fermentum diam, ut
-                            suscipit
-                            libero. Nam ut ipsum ut justo dignissim egestas nec nec neque. Curabitur
-                            efficitur nec tortor
-                            sed
-                            imperdiet.
-
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-
+            <?php endforeach; ?>
         </div>
     </div>
 

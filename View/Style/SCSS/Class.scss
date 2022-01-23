@@ -1,5 +1,3 @@
-@import "Class_title";
-@import "Class_background";
 
 .calendar_button{
   display: flex;
@@ -29,6 +27,21 @@
   width: 50vw;
   border-radius: 32px;
   padding: 20px;
+  background-color: $brown;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.buttonIcon{
+  text-align: center;
+  margin-left: auto;
+  margin-right: 10px;
+  margin-top: 10px;
+  color: $white !important;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 10px;
+  width: 24px;
   background-color: $brown;
   font-size: 20px;
   font-weight: bold;
@@ -65,6 +78,17 @@
   flex-direction: column;
   margin: auto;
 }
+
+.white-icon {
+  color: white !important;
+  text-decoration: none;
+}
+
+.white-hive-icon {
+   color: white !important;
+   text-decoration: none;
+   margin-left: 10px;
+ }
 
 
 .area_parent {
@@ -209,4 +233,60 @@
 .area_child.home {
   margin-right: 5px;
   margin-left: 5px;
+}
+
+.form{
+  padding: 18px;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  margin-top: 20px;
+}
+
+.form.hive_area{
+  display: flex;
+  flex-direction: column !important;
+  margin-top: 0;
+  width: 83.5%;
+}
+
+.stat_form_size{
+  width: 90%;
+  margin: auto;
+}
+
+input.form{
+  width: 91% !important;
+  margin-top: 0;
+}
+
+form{
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+.form_area{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+.banner_message{
+  width: 100%;
+  height: 40px;
+}
+
+.error {
+  background-color: lightcoral;
 }
