@@ -14,7 +14,7 @@ ob_start();
                         <form action="?action=SaveLog&hiveid=<?= $_SESSION['hiveid'] ?>" method="post">
                             <div class="stat_form_size">
                                 <div class="title_note_hive">
-                                    <label for="logName">Commentaire</label>
+                                    <lagitbel for="logName">Commentaire</lagitbel>
                                 </div>
                                 <input id="logName" name="logName" class="area_child hive content form" type="text">
                             </div>

@@ -23,12 +23,34 @@ class StatsController
         require "View/Stat.php";
     }
 
+    function create()
+    {
+        require "View/CreateStat.php";
+    }
+
+    function save()
+    {
+        $stats = $this->stats->GetStats()->find();
+        foreach ($stats as $stat) {
+            if ($stat['hiveid'] === intval($_POST['hive'])) {
+                if ($stat['date'] == date("d/m/Y")) {
+                    $message = "Vous avez déjà des stats pour aujourd'hui";
+                    $type_message = "error";
+                    require "View/CreateStat.php";
+                }
+            }
+        }
+        $this->stats->GetStats()->insertOne(['hiveid'=> intval($_POST['hive']),'date' => date("d/m/Y"), 'weight' => $_POST['weight'], 'humidity' => $_POST['humidity'], 'temperature' => $_POST['temp']]);
+
+        header('Location: ?action=Stats');
+    }
+
 
     function edit()
     {
         $AllStats = $this->stats->GetStats()->find(['hiveid' => intval($_GET['hive'])]);
         foreach ($AllStats as $stat) {
-            if ($stat->getDate == substr($_GET['stat'], 1, -1)) {
+            if ($stat->date == substr($_GET['stat'], 1, -1)) {
                 $stats = $stat;
                 break;
             }
@@ -45,6 +67,12 @@ class StatsController
                 "weight" => intval($_POST['weight']),
             ]]
         );
-        $this->index();
+        header('Location: ?action=Stats');
+    }
+
+    function delete(){
+        $this->stats->GetStats()->deleteOne(['date' => substr($_GET['statDate'], 1, -1)]);
+
+        header('Location: ?action=Stats');
     }
 }

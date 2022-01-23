@@ -45,11 +45,20 @@ switch ($action) {
     case "Stats" :
         $StatsController->index();
         break;
+    case "CreateStat" :
+        $StatsController->create();
+        break;
+    case "SaveStat" :
+        $StatsController->save();
+        break;
     case "EditStats" :
         $StatsController->edit();
         break;
     case "UpdateStats" :
         $StatsController->update();
+        break;
+    case "DeleteStat" :
+        $StatsController->delete();
         break;
     case "JDB" :
 
@@ -76,6 +85,15 @@ switch ($action) {
         break;
     case "CreateHive" :
         $HiveController->create();
+        break;
+    case "EditHive" :
+        $HiveController->edit();
+        break;
+    case "UpdateHive" :
+        $HiveController->update();
+        break;
+    case "DeleteHive" :
+        $HiveController->delete();
         break;
     case "CreateLog" :
         $LogsController->create();

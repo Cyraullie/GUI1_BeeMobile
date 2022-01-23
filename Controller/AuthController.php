@@ -51,7 +51,7 @@ class AuthController
         $alreadyExist = false;
         foreach ($users as $client) {
             $id++;
-            if ($client->getName == $_POST['username']) {
+            if ($client['name'] == $_POST['username']) {
                 $alreadyExist = true;
             }
         }

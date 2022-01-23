@@ -173,6 +173,12 @@
     margin-left: 65%;
 }
 
+.white-hive-icon {
+    color: white !important;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
 .area_parent {
     background-color: #343223;
     min-height: 120px;
@@ -487,6 +493,7 @@ form {
     display: flex;
     flex-direction: row;
     align-content: center;
+    justify-content: space-between;
 }
 
 .title_home {
@@ -532,6 +539,10 @@ form {
     color: #E5E5E5;
     padding-left: 20px;
     border-radius: 16px 16px 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
 }
 
 body {
