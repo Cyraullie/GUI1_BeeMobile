@@ -7,13 +7,13 @@ ob_start();
         <div class="background_scrollable">
             <?php foreach ($hives as $hive) {?>
 
-                <button class="accordion title_hive"><?= $hive['name'] ?></button>
+                <button class="accordion title_hive"><a><?= $hive['name'] ?></a> <a class="white-hive-icon fa-2x" href="?action=EditHive&hive=<?= $hive['hiveid'] ?>"><i class="fas fa-edit"></i></a></button>
                 <div class="panel background_hive">
                     <div class="panel background_center">
 
                         <?php foreach ($stats->find(['hiveid' => $hive['hiveid']]) as $stat) { ?>
 
-                        <button class="accordion title_day_hive"><?= $stat['date'] ?> <a class="white-icon fa-2x" href="?action=EditStats&hive=<?= $hive['hiveid'] ?>&stat=<<?= $stat['date'] ?>>"><i class="fas fa-edit"></i></a></button>
+                        <button class="accordion title_day_hive"><a><?= $stat['date'] ?></a> <a class="white-icon fa-2x" href="?action=EditStats&hive=<?= $hive['hiveid'] ?>&stat=<<?= $stat['date'] ?>>"><i class="fas fa-edit"></i></a></button>
                         <div class=" panel area_parent hive">
                             <div class="hive_area">
                                 <div class="stat_size">

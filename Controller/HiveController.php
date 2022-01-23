@@ -36,19 +36,22 @@ class HiveController
         $this->hives->GetHives()->insertOne(['userid' => $_SESSION['user'], 'hiveid' => $id, 'name' => $_POST['hiveName']]);
 
         header('Location: ?action=Stats');
-        /*require_once "Controller/StatsController.php";
-        $StatsController = new StatsController();
-        $StatsController->index();*/
 
     }
 
     function edit()
     {
-
+        $hives = $this->hives->GetHives()->find(['hiveid' => intval($_GET['hive'])]);
+        require "View/EditHive.php";
     }
 
     function update()
     {
-
+        var_dump($_POST);
+        $this->hives->GetHives()->updateOne(
+            ['hiveid' => intval($_POST['hive'])],
+            ['$set' => ["name" => $_POST['hiveName']]]
+        );
+        header('Location: ?action=Stats');
     }
 }
