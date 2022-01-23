@@ -45,11 +45,20 @@ switch ($action) {
     case "Stats" :
         $StatsController->index();
         break;
+    case "CreateStat" :
+        $StatsController->create();
+        break;
+    case "SaveStat" :
+        $StatsController->save();
+        break;
     case "EditStats" :
         $StatsController->edit();
         break;
     case "UpdateStats" :
         $StatsController->update();
+        break;
+    case "DeleteStat" :
+        $StatsController->delete();
         break;
     case "JDB" :
 
