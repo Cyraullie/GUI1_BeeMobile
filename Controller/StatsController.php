@@ -30,18 +30,19 @@ class StatsController
 
     function save()
     {
-        $stats = $this->stats->GetStats()->find(['hiveid' => intval($_GET['hive'])]);
+        $stats = $this->stats->GetStats()->find();
         foreach ($stats as $stat) {
-            if ($stat['date'] == date("d/m/Y")) {
-                $message = "Vous avez déjà des stats pour aujourd'hui";
-                $type_message = "error";
-                require "View/CreateStat.php";
+            if ($stat['hiveid'] === intval($_POST['hive'])) {
+                if ($stat['date'] == date("d/m/Y")) {
+                    $message = "Vous avez déjà des stats pour aujourd'hui";
+                    $type_message = "error";
+                    require "View/CreateStat.php";
+                }
             }
         }
         $this->stats->GetStats()->insertOne(['hiveid'=> intval($_POST['hive']),'date' => date("d/m/Y"), 'weight' => $_POST['weight'], 'humidity' => $_POST['humidity'], 'temperature' => $_POST['temp']]);
 
         header('Location: ?action=Stats');
-
     }
 
 
