@@ -4,12 +4,14 @@ class HiveController
 {
     private User $users;
     private Hive $hives;
+    private Stat $stats;
 
     public function __construct()
     {
 
         $this->users = new User();
         $this->hives = new Hive();
+        $this->stats = new Stat();
 
     }
 
@@ -56,7 +58,7 @@ class HiveController
 
     function delete(){
         $this->hives->GetHives()->deleteOne(['hiveid' => intval($_GET['hive'])]);
-
+        $this->stats->GetStats()->deleteMany(['hiveid' => intval($_GET['hive'])]);
         header('Location: ?action=Stats');
     }
 }
