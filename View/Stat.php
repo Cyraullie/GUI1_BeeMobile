@@ -7,7 +7,7 @@ ob_start();
         <div class="background_scrollable">
             <?php foreach ($hives as $hive) {?>
 
-                <button class="accordion title_hive"><a><?= $hive['name'] ?></a> <a class="white-hive-icon fa-2x" href="?action=EditHive&hive=<?= $hive['hiveid'] ?>"><i class="fas fa-edit"></i></a></button>
+                <button class="accordion title_hive"><a><?= $hive['name'] ?></a> <div><a class="white-hive-icon fa-2x" href="?action=EditHive&hive=<?= $hive['hiveid'] ?>"><i class="fas fa-edit"></i></a><a class="white-hive-icon fa-2x" href="?action=DeleteHive&hive=<?= $hive['hiveid'] ?>"><i class="fas fa-trash-alt"></i></a></div></button>
                 <div class="panel background_hive">
                     <div class="panel background_center">
 

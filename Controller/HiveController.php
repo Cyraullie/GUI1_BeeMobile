@@ -47,11 +47,16 @@ class HiveController
 
     function update()
     {
-        var_dump($_POST);
         $this->hives->GetHives()->updateOne(
             ['hiveid' => intval($_POST['hive'])],
             ['$set' => ["name" => $_POST['hiveName']]]
         );
+        header('Location: ?action=Stats');
+    }
+
+    function delete(){
+        $this->hives->GetHives()->deleteOne(['hiveid' => intval($_GET['hive'])]);
+
         header('Location: ?action=Stats');
     }
 }

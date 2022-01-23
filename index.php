@@ -83,6 +83,9 @@ switch ($action) {
     case "UpdateHive" :
         $HiveController->update();
         break;
+    case "DeleteHive" :
+        $HiveController->delete();
+        break;
     case "CreateLog" :
         $LogsController->create();
         break;
